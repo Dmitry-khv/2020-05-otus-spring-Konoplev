@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="resourceManager" class="ru.otus.hw1.resourcemanager.ResourceDataManager">
+        <constructor-arg value="classpath:data.csv"/>
+    </bean>
+    <bean id="messageDao" class="ru.otus.hw1.dao.MessageDaoImpl">
+        <constructor-arg name="resource" ref="resourceManager"/>
+    </bean>
+    <bean id="messageService" class="ru.otus.hw1.service.MessageServiceImpl">
+        <constructor-arg name="messageDao" ref="messageDao"/>
+    </bean>
+
+</beans>
