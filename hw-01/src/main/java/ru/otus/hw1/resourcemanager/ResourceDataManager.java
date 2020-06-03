@@ -1,7 +1,5 @@
 package ru.otus.hw1.resourcemanager;
 
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
 import ru.otus.hw1.model.Message;
 
@@ -11,7 +9,6 @@ import java.io.IOException;
 
 public class ResourceDataManager implements ResourceData{
     private final Resource dataSource;
-//    private static Logger logger = LoggerFactory.getLogger(ResourceDataManager.class);
 
     public ResourceDataManager(Resource dataSource) {
         this.dataSource = dataSource;
@@ -26,7 +23,7 @@ public class ResourceDataManager implements ResourceData{
                 result.append(line).append("\n");
             }
         } catch (IOException e) {
-//            logger.error(e.getMessage(), e);
+            result.append("file not found or smt else");
         }
         return new Message(result.toString());
     }
