@@ -1,7 +1,8 @@
 package ru.otus.hw1.service;
 
-import ru.otus.hw1.model.Message;
+
+import java.io.OutputStream;
 
 public interface MessageService {
-    Message getMessage();
+    void getMessage(OutputStream outputStream);
 }

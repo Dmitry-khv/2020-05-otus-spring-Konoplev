@@ -1,7 +1,7 @@
 package ru.otus.hw1.resourcemanager;
 
 import org.springframework.core.io.Resource;
-import ru.otus.hw1.model.Message;
+import ru.otus.hw1.model.Question;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,7 +15,7 @@ public class ResourceDataManager implements ResourceData{
     }
 
     @Override
-    public Message getMessage() {
+    public Question getMessage() {
         StringBuffer result = new StringBuffer();
         try (BufferedReader reader = new BufferedReader(new FileReader(dataSource.getFile()))) {
             String line;
@@ -25,6 +25,6 @@ public class ResourceDataManager implements ResourceData{
         } catch (IOException e) {
             result.append("file not found or smt else");
         }
-        return new Message(result.toString());
+        return new Question(result.toString());
     }
 }

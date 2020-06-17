@@ -1,6 +1,6 @@
 package ru.otus.hw1.dao;
 
-import ru.otus.hw1.model.Message;
+import ru.otus.hw1.model.Question;
 import ru.otus.hw1.resourcemanager.ResourceData;
 
 public class MessageDaoImpl implements MessageDao{
@@ -12,7 +12,7 @@ public class MessageDaoImpl implements MessageDao{
     }
 
     @Override
-    public Message getMessage() {
+    public Question getMessage() {
         return resource.getMessage();
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns="http://www.springframework.org/schema/beans"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <bean id="resourceManager" class="ru.otus.hw1.resourcemanager.ResourceDataManager">
         <constructor-arg value="classpath:data.csv"/>
@@ -10,8 +10,15 @@
     <bean id="messageDao" class="ru.otus.hw1.dao.MessageDaoImpl">
         <constructor-arg name="resource" ref="resourceManager"/>
     </bean>
+    <bean id="printService" class="ru.otus.hw1.service.PrintServiceImpl">
+        <constructor-arg name="outputStream">
+            <bean id="java.lang.System.out"
+                  class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+        </constructor-arg>
+    </bean>
     <bean id="messageService" class="ru.otus.hw1.service.MessageServiceImpl">
         <constructor-arg name="messageDao" ref="messageDao"/>
+        <constructor-arg name="printService" ref="printService"/>
     </bean>
 
 </beans>

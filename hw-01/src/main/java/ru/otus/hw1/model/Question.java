@@ -1,10 +1,10 @@
 package ru.otus.hw1.model;
 
-public class Message {
+public class Question {
 
     private final String msg;
 
-    public Message(String msg) {
+    public Question(String msg) {
         this.msg = msg;
     }
 
