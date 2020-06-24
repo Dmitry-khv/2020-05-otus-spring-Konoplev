@@ -2,31 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/PrintService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/PrintServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/PrintService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/PrintServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/resources/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_16_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_3_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-01/hw-01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/hw-01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/resources/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/resources/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/dao/MessageDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/dao/QuestionDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/service/MessageServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/service/QuestionServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/model/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceData.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceDataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceDataManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/test-classes/ru/otus/hw1/dao/MessageDaoImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/test-classes/ru/otus/hw1/service/MessageServiceImplTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +78,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cfqwR81FtzutnZMXCzle5pYBhx" />
@@ -54,6 +94,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -62,13 +103,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw-02/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -76,17 +121,23 @@
       <recent name="ru.otus.hw1.dao" />
       <recent name="ru.otus.hw1.resourcemanager" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hw-01/src/main/resources" />
       <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.otus.hw2" />
+      <recent name="ru.otus.hw2.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hw-02/src/main/resources" />
+      <recent name="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2" />
+      <recent name="$PROJECT_DIR$/hw-02/src/main/java" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager" />
-      <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/orus/hw1/resourcemanager" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.orus.hw1.resourcemanager" />
@@ -192,11 +243,15 @@
       <updated>1590930233379</updated>
       <workItem from="1590930235211" duration="9685000" />
       <workItem from="1591104653844" duration="15550000" />
+      <workItem from="1592902234004" duration="857000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="100" width="1080" height="600" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1591185358767">
@@ -215,50 +270,54 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1592397704320" />
-    <state width="1238" height="196" key="GridCell.Tab.0.bottom" timestamp="1592401723054">
+    <state width="1238" height="254" key="GridCell.Tab.0.bottom" timestamp="1592429373427">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592401723054" />
+    <state width="1238" height="254" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592429373427" />
     <state width="1238" height="205" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1591187706601" />
-    <state width="1238" height="196" key="GridCell.Tab.0.center" timestamp="1592401723050">
+    <state width="1238" height="254" key="GridCell.Tab.0.center" timestamp="1592429373423">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1592401723050" />
+    <state width="1238" height="254" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1592429373423" />
     <state width="1238" height="205" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1591187706580" />
-    <state width="1238" height="196" key="GridCell.Tab.0.left" timestamp="1592401723049">
+    <state width="1238" height="254" key="GridCell.Tab.0.left" timestamp="1592429373421">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1592401723049" />
+    <state width="1238" height="254" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1592429373421" />
     <state width="1238" height="205" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1591187706579" />
-    <state width="1238" height="196" key="GridCell.Tab.0.right" timestamp="1592401723052">
+    <state width="1238" height="254" key="GridCell.Tab.0.right" timestamp="1592429373425">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1592401723052" />
+    <state width="1238" height="254" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1592429373425" />
     <state width="1238" height="205" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1591187706591" />
-    <state width="1238" height="254" key="GridCell.Tab.1.bottom" timestamp="1591187564611">
+    <state width="1238" height="254" key="GridCell.Tab.1.bottom" timestamp="1592429373433">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1591187564611" />
-    <state width="1238" height="254" key="GridCell.Tab.1.center" timestamp="1591187564606">
+    <state width="1238" height="254" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592429373433" />
+    <state width="1238" height="254" key="GridCell.Tab.1.center" timestamp="1592429373430">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1591187564606" />
-    <state width="1238" height="254" key="GridCell.Tab.1.left" timestamp="1591187564605">
+    <state width="1238" height="254" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1592429373430" />
+    <state width="1238" height="254" key="GridCell.Tab.1.left" timestamp="1592429373428">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1591187564605" />
-    <state width="1238" height="254" key="GridCell.Tab.1.right" timestamp="1591187564608">
+    <state width="1238" height="254" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1592429373428" />
+    <state width="1238" height="254" key="GridCell.Tab.1.right" timestamp="1592429373431">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1591187564608" />
+    <state width="1238" height="254" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1592429373431" />
+    <state x="149" y="0" key="SettingsEditor" timestamp="1592403733788">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="149" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1592403733788" />
     <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591188032374">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1591188032374" />
-    <state x="63" y="63" key="new project wizard" timestamp="1590930746251">
+    <state x="89" y="122" key="new project wizard" timestamp="1592402704736">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="63" y="63" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1590930746251" />
+    <state x="89" y="122" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1592402704736" />
     <state x="305" y="124" key="search.everywhere.popup" timestamp="1591012496566">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
