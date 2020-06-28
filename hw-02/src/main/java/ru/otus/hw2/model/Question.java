@@ -1,15 +1,16 @@
 package ru.otus.hw2.model;
 
+
 public class Question {
 
-    private final String msg;
+    private final String question;
 
-    public Question(String msg) {
-        this.msg = msg;
+    public Question(String question) {
+        this.question = question;
     }
 
     public String readMessage(){
-        return msg;
+        return question;
     }
 
 }

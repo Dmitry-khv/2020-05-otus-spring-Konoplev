@@ -18,7 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hw-01" options="-parameters" />
-      <module name="hw-02" options="--add-exports java.base/jdk.internal.loader=ALL-UNNAMED" />
+      <module name="hw-02" options="" />
     </option>
   </component>
 </project>

@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 import ru.otus.hw2.model.Question;
 import ru.otus.hw2.resourcemanager.ResourceData;
 
+import java.util.List;
+
 @Repository
 public class MessageDaoImpl implements MessageDao{
 
@@ -17,6 +19,11 @@ public class MessageDaoImpl implements MessageDao{
 
     @Override
     public Question getQuestions() {
-        return resource.getMessage();
+        return resource.getQuestions();
+    }
+
+    @Override
+    public List<String> getAnswers() {
+        return resource.getAnswers();
     }
 }

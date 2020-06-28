@@ -1,8 +1,9 @@
 package ru.otus.hw2.service;
 
 
-import java.io.OutputStream;
+import java.util.List;
 
 public interface MessageService {
-    void getMessage(OutputStream outputStream);
+    void getQuestions();
+    List<String> getAnswersList();
 }

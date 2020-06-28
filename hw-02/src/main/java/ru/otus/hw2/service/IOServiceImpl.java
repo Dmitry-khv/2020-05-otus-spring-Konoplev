@@ -1,23 +1,47 @@
 package ru.otus.hw2.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
+import java.io.*;
 
-@Service
-public class IOServiceImpl implements IOService {
+
+public class IOServiceImpl implements IOService, AutoCloseable {
+
+    private static Logger logger = LoggerFactory.getLogger(IOServiceImpl.class);
+    private final BufferedReader reader;
     private final PrintStream printStream;
 
-    @Autowired
-    public IOServiceImpl(OutputStream outputStream) {
-        this.printStream = new PrintStream(outputStream);
+    public IOServiceImpl(InputStream is, OutputStream os) {
+        reader = new BufferedReader(new InputStreamReader(is));
+        printStream = new PrintStream(os);
+    }
+
+    @Override
+    public String read() {
+        String msg = null;
+        try {
+             msg = reader.readLine();
+        } catch (IOException e) {
+            logger.error("Incorrect input", e);
+        }
+        return msg;
     }
 
     @Override
     public void print(String msg) {
-        printStream.print(msg);
+        printStream.println(msg);
     }
+
+    @Override
+    public void print(int num) {
+        printStream.println(num);
+    }
+
+    @Override
+    public void close() throws Exception {
+        reader.close();
+        printStream.close();
+    }
+
 }
