@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/resources/correct.answer.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/dao/MessageDaoImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/resourcemanager/ResourceDataManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/service/QuizTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/test/resources/correct.answer.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-02/src/test/resources/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-01/src/main/resources/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/resources/spring-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/QuestionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/MessageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/QuestionDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/IOService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/IOService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/IOServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/IOServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/resources/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/QuestionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/dao/MessageDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/dao/QuestionDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/service/QuizTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/service/QuizTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageDaoImplTest.getAnswers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuestionDaoImplTest.getAnswers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw-02" />
       <extension name="coverage">
         <pattern>
@@ -134,14 +120,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.otus.hw2.dao" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.dao.MessageDaoImplTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.dao.QuestionDaoImplTest" />
       <option name="METHOD_NAME" value="getAnswers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageDaoImplTest.getQuestions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuestionDaoImplTest.getQuestions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw-02" />
       <extension name="coverage">
         <pattern>
@@ -150,7 +136,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.otus.hw2.dao" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.dao.MessageDaoImplTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.dao.QuestionDaoImplTest" />
       <option name="METHOD_NAME" value="getQuestions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -194,8 +180,8 @@
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ResourceDataManagerTest.correctAnswersFileParsing" />
         <item itemvalue="JUnit.ResourceDataManagerTest.correctParsingQuestionFile" />
-        <item itemvalue="JUnit.MessageDaoImplTest.getAnswers" />
-        <item itemvalue="JUnit.MessageDaoImplTest.getQuestions" />
+        <item itemvalue="JUnit.QuestionDaoImplTest.getAnswers" />
+        <item itemvalue="JUnit.QuestionDaoImplTest.getQuestions" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +197,7 @@
       <updated>1590930233379</updated>
       <workItem from="1590930235211" duration="9685000" />
       <workItem from="1591104653844" duration="15550000" />
-      <workItem from="1592902234004" duration="23708000" />
+      <workItem from="1592902234004" duration="25964000" />
     </task>
     <servers />
   </component>
@@ -243,29 +229,29 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="124" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.800@0.0.1280.800" timestamp="1591103850177" />
-    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593224169477">
+    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593427517098">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1593224169477" />
-    <state width="1238" height="259" key="GridCell.Tab.0.bottom" timestamp="1593313053830">
+    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1593427517098" />
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1593428102640">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="259" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1593313053830" />
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1593428102640" />
     <state width="1238" height="205" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1591187706601" />
-    <state width="1238" height="259" key="GridCell.Tab.0.center" timestamp="1593313053828">
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1593428102636">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="259" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1593313053828" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1593428102636" />
     <state width="1238" height="205" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1591187706580" />
-    <state width="1238" height="259" key="GridCell.Tab.0.left" timestamp="1593313053826">
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1593428102634">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="259" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1593313053826" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1593428102634" />
     <state width="1238" height="205" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1591187706579" />
-    <state width="1238" height="259" key="GridCell.Tab.0.right" timestamp="1593313053829">
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1593428102638">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="259" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1593313053829" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1593428102638" />
     <state width="1238" height="205" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1591187706591" />
     <state width="1238" height="236" key="GridCell.Tab.1.bottom" timestamp="1593308682342">
       <screen x="0" y="0" width="1280" height="800" />

@@ -4,7 +4,7 @@ import ru.otus.hw2.model.Question;
 
 import java.util.List;
 
-public interface MessageDao {
+public interface QuestionDao {
 
     Question getQuestions();
 

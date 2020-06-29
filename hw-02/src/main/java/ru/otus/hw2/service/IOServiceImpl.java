@@ -8,7 +8,7 @@ import java.io.*;
 
 public class IOServiceImpl implements IOService, AutoCloseable {
 
-    private static Logger logger = LoggerFactory.getLogger(IOServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(IOServiceImpl.class);
     private final BufferedReader reader;
     private final PrintStream printStream;
 
@@ -23,7 +23,7 @@ public class IOServiceImpl implements IOService, AutoCloseable {
         try {
              msg = reader.readLine();
         } catch (IOException e) {
-            logger.error("Incorrect input", e);
+            LOGGER.error("Incorrect input", e);
         }
         return msg;
     }

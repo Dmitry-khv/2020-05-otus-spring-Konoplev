@@ -8,12 +8,12 @@ import ru.otus.hw2.resourcemanager.ResourceData;
 import java.util.List;
 
 @Repository
-public class MessageDaoImpl implements MessageDao{
+public class QuestionDaoImpl implements QuestionDao {
 
     private final ResourceData resource;
 
     @Autowired
-    public MessageDaoImpl(ResourceData resource) {
+    public QuestionDaoImpl(ResourceData resource) {
         this.resource = resource;
     }
 

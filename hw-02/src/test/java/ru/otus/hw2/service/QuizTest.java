@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.context.MessageSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,17 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class QuizTest {
 
     @Mock
-    private MessageService messageService;
+    private QuestionService questionService;
     @Mock
     private IOService ioService;
-    @Mock
-    private MessageSource messageSource;
 
     private Quiz quiz;
 
     @BeforeEach
     public void setUp() {
-        quiz = new Quiz(messageService, ioService, messageSource);
+        quiz = new Quiz(questionService, ioService, 3, 5);
     }
 
     @Test

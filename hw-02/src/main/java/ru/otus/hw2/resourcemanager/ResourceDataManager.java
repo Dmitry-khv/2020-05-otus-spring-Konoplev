@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import ru.otus.hw2.model.Question;
 
 import java.io.BufferedReader;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Component
 public class ResourceDataManager implements ResourceData{
     private static final Logger LOG = LoggerFactory.getLogger(ResourceDataManager.class);
     private final Resource questionSource;

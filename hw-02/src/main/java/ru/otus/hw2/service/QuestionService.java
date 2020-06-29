@@ -3,7 +3,7 @@ package ru.otus.hw2.service;
 
 import java.util.List;
 
-public interface MessageService {
-    void getQuestions();
+public interface QuestionService {
+    String getQuestions();
     List<String> getAnswersList();
 }

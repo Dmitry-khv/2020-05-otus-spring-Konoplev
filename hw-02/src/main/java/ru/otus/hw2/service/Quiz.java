@@ -2,40 +2,35 @@ package ru.otus.hw2.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import ru.otus.hw2.model.Student;
 
 import java.util.List;
-import java.util.Locale;
 
 @Service
 public class Quiz {
-    private final MessageService messageService;
+    private final QuestionService questionService;
     private final IOService ioService;
-    private final MessageSource messageSource;
-    private static final Locale LOCALE_EN = Locale.ENGLISH;
-
-    @Value("${success.count.answer}")
-    private int successCountAnswers;
-
-    @Value("${question.count}")
-    private int questionCount;
+    private final int successCountAnswers;
+    private final int questionCount;
 
 
     @Autowired
-    public Quiz(MessageService messageService, IOService ioService, MessageSource messageSource) {
-        this.messageService = messageService;
+    public Quiz(QuestionService questionService, IOService ioService,
+                @Value("${success.count.answer}") int successCountAnswers,
+                @Value("${question.count}") int questionCount) {
+        this.questionService = questionService;
         this.ioService = ioService;
-        this.messageSource = messageSource;
+        this.successCountAnswers = successCountAnswers;
+        this.questionCount = questionCount;
     }
 
     public void run() {
         Student student = greet();
-        ioService.print("Let's do the Show!");
+        ioService.print("Мы начинаес!");
         ioService.print("___________________");
-        messageService.getQuestions();
-        ioService.print("Enter your answers each in a new line");
+        ioService.print(questionService.getQuestions());
+        ioService.print("Введите ответ каждый с новой строки");
 
         for (int i = 0; i < questionCount; i++) {
             student.setTest(ioService.read());
@@ -44,18 +39,18 @@ public class Quiz {
         checkQuiz(student);
 
         if(student.isTestSuccess()) {
-            ioService.print(messageSource.getMessage("success", null, LOCALE_EN));
+            ioService.print("Поздравляю? Вы молодец!");
         } else {
-            ioService.print(messageSource.getMessage("fail", null, LOCALE_EN));
+            ioService.print("Не плохое начало, давайте попробуем еще раз!");
         }
 
     }
 
     public Student greet() {
-        ioService.print(messageSource.getMessage("greeting", null, LOCALE_EN));
-        ioService.print(messageSource.getMessage("first.name", null, LOCALE_EN));
+        ioService.print("Привет, вы готовы к тесту?");
+        ioService.print("Введите ваше имя:");
         String firstName = ioService.read();
-        ioService.print(messageSource.getMessage("last.name", null, LOCALE_EN));
+        ioService.print("Введите вашу фамилию:");
         String lastName = ioService.read();
         return new Student(firstName, lastName);
     }
@@ -63,7 +58,7 @@ public class Quiz {
     public void checkQuiz(Student student) {
         int correctCountAnswers = 0;
         List<String> studentAnswers = student.getTest();
-        List<String> correctAnswers = messageService.getAnswersList();
+        List<String> correctAnswers = questionService.getAnswersList();
 
         for (int i = 0; i < questionCount; i++) {
             if (studentAnswers.get(i).equals(correctAnswers.get(i)))

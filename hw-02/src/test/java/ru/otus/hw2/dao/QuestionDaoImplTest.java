@@ -14,28 +14,28 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)
-class MessageDaoImplTest {
+class QuestionDaoImplTest {
 
     @Mock
     private ResourceData resource;
-    private MessageDao messageDao;
+    private QuestionDao questionDao;
 
     @BeforeEach
     public void setUp() {
-        messageDao = new MessageDaoImpl(resource);
+        questionDao = new QuestionDaoImpl(resource);
     }
 
 
     @Test
     void returnCorrectQuestion() {
-        given(messageDao.getQuestions()).willReturn(new Question("test message"));
-        assertEquals("test message", messageDao.getQuestions().readMessage());
+        given(questionDao.getQuestions()).willReturn(new Question("test message"));
+        assertEquals("test message", questionDao.getQuestions().readMessage());
     }
 
     @Test
     void getAnswers() {
-        given(messageDao.getAnswers()).willReturn(Arrays.asList("a", "a", "a", "b"));
+        given(questionDao.getAnswers()).willReturn(Arrays.asList("a", "a", "a", "b"));
         List<String> answ = Arrays.asList("a", "a", "a", "b");
-        assertEquals(answ, messageDao.getAnswers());
+        assertEquals(answ, questionDao.getAnswers());
     }
 }
