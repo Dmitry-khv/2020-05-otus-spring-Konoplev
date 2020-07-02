@@ -3,30 +3,22 @@ package ru.otus.hw2.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.otus.hw2.dao.QuestionDao;
+import ru.otus.hw2.model.Question;
 
 import java.util.List;
 
 @Service
 public class QuestionServiceImpl implements QuestionService {
     private final QuestionDao questionDao;
-    private final IOService ioService;
 
 
     @Autowired
-    public QuestionServiceImpl(QuestionDao questionDao, IOService ioService) {
+    public QuestionServiceImpl(QuestionDao questionDao) {
         this.questionDao = questionDao;
-        this.ioService = ioService;
     }
 
     @Override
-    public String getQuestions() {
-         return questionDao.getQuestions().readMessage();
+    public List<Question> getQuestions() {
+         return questionDao.getQuestions();
     }
-
-    @Override
-    public List<String> getAnswersList() {
-        return questionDao.getAnswers();
-    }
-
-
 }

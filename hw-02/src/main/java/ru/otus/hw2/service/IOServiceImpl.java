@@ -34,11 +34,6 @@ public class IOServiceImpl implements IOService, AutoCloseable {
     }
 
     @Override
-    public void print(int num) {
-        printStream.println(num);
-    }
-
-    @Override
     public void close() throws Exception {
         reader.close();
         printStream.close();

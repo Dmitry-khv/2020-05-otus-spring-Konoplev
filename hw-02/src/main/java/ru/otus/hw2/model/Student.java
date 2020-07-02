@@ -1,41 +1,32 @@
 package ru.otus.hw2.model;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@RequiredArgsConstructor
 public class Student {
     private final String firstName;
     private final String lastName;
-    private List<String> test = new ArrayList<>();
+    @Getter
+    private List<Answer> test = new ArrayList<>();
+
+    @Setter
+    @Getter
     private boolean testResult = false;
 
-
-    public Student(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public void setTest(Answer answer) {
+        test.add(answer);
     }
 
-    public List<String> getTest() {
-        return test;
-    }
-
-    public boolean isTestSuccess() {
+    public boolean getTestResult() {
         return testResult;
     }
 
     public void setTestResult(boolean result) {
         this.testResult = result;
-    }
-
-    public void setTest( String answer) {
-        test.add(answer);
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
     }
 }

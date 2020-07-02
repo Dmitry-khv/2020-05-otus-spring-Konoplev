@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
+import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 
 import java.io.BufferedReader;
@@ -28,20 +29,61 @@ public class ResourceDataManager implements ResourceData{
     }
 
     @Override
-    public Question getQuestions() {
-        StringBuilder result = new StringBuilder();
+    public List<Question> getQuestions() {
+        List<Question> questionList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(questionSource.getFile()))) {
             String line;
+            Question question = new Question();
             while ((line = reader.readLine()) != null) {
-                result.append(line).append("\n");
+                if (isQuestion(line)) {
+                    question = new Question();
+                    question.setQuestion(line);
+                } else if (!line.isEmpty()) {
+                    question.addAnswer(new Answer(line));
+                } else {
+                    questionList.add(question);
+                }
+            }
+            if (!questionList.contains(question)) {
+                questionList.add(question);
             }
         } catch (IOException e) {
-            LOG.error("question file not found...", e);
+            LOG.error("question file not found {}", e.getMessage());
         }
+        setUpTrueAnswers(questionList);
+        return questionList;
+    }
 
+    public void setUpTrueAnswers(List<Question> questionList) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(answerSource.getFile()))) {
+            String trueAnswer;
+            int count = 0;
+            while ((trueAnswer = reader.readLine()) != null) {
+                Question question = questionList.get(count);
+                List<Answer> answers = question.getAnswers();
+                for (Answer answer : answers) {
+                    if (answer.getOptionAnswer().startsWith(trueAnswer)) {
+                        answer.setRight(true);
+                    }
+                }
+                count++;
+            }
+        } catch (IOException e) {
 
+        }
+    }
 
-        return new Question(result.toString());
+    public boolean isQuestion(String line) {
+        boolean result = false;
+        for (char c : line.toCharArray()) {
+            if (Character.isDigit(c)) {
+                result = true;
+            } else {
+                return false;
+            }
+            break;
+        }
+        return result;
     }
 
     @Override

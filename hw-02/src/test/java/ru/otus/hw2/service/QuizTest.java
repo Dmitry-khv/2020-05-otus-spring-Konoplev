@@ -15,12 +15,14 @@ class QuizTest {
     private QuestionService questionService;
     @Mock
     private IOService ioService;
+    @Mock
+    private Greeting greeting;
 
     private Quiz quiz;
 
     @BeforeEach
     public void setUp() {
-        quiz = new Quiz(questionService, ioService, 3, 5);
+        quiz = new Quiz(questionService, ioService, greeting, 3, 5);
     }
 
     @Test

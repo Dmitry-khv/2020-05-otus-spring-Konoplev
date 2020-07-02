@@ -1,16 +1,27 @@
 package ru.otus.hw2.model;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Question {
 
-    private final String question;
+    private String question;
+    private List<Answer> answers = new ArrayList<>();
 
-    public Question(String question) {
-        this.question = question;
-    }
-
-    public String readMessage(){
+    public String getQuestion(){
         return question;
     }
 
+    public List<Answer>getAnswers() {
+        return answers;
+    }
+
+    public void addAnswer(Answer answer){
+        answers.add(answer);
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
 }

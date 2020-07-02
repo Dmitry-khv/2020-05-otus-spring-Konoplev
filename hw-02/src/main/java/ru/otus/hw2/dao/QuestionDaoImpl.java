@@ -1,6 +1,6 @@
 package ru.otus.hw2.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import ru.otus.hw2.model.Question;
 import ru.otus.hw2.resourcemanager.ResourceData;
@@ -8,17 +8,13 @@ import ru.otus.hw2.resourcemanager.ResourceData;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class QuestionDaoImpl implements QuestionDao {
 
     private final ResourceData resource;
 
-    @Autowired
-    public QuestionDaoImpl(ResourceData resource) {
-        this.resource = resource;
-    }
-
     @Override
-    public Question getQuestions() {
+    public List<Question> getQuestions() {
         return resource.getQuestions();
     }
 
