@@ -16,13 +16,13 @@ class QuizTest {
     @Mock
     private IOService ioService;
     @Mock
-    private Greeting greeting;
+    private GreetingService greetingService;
 
     private Quiz quiz;
 
     @BeforeEach
     public void setUp() {
-        quiz = new Quiz(questionService, ioService, greeting, 3, 5);
+        quiz = new Quiz(questionService, ioService, greetingService, 3);
     }
 
     @Test

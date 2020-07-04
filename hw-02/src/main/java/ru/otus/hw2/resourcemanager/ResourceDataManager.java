@@ -62,7 +62,7 @@ public class ResourceDataManager implements ResourceData{
                 Question question = questionList.get(count);
                 List<Answer> answers = question.getAnswers();
                 for (Answer answer : answers) {
-                    if (answer.getOptionAnswer().startsWith(trueAnswer)) {
+                    if (answer.getAnswerAsString().startsWith(trueAnswer)) {
                         answer.setRight(true);
                     }
                 }
@@ -87,12 +87,12 @@ public class ResourceDataManager implements ResourceData{
     }
 
     @Override
-    public List<String> getAnswers() {
-        List<String> answersList = new ArrayList<>();
+    public List<Answer> getAnswers() {
+        List<Answer> answersList = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(answerSource.getFile()))){
             String answer;
             while((answer = reader.readLine()) != null) {
-                answersList.add(answer);
+                answersList.add(new Answer(answer));
             }
         } catch (IOException e) {
             LOG.error("answer file not found...", e);

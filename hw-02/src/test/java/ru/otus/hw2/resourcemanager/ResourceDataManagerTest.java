@@ -1,11 +1,13 @@
 package ru.otus.hw2.resourcemanager;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
+import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 
 import java.io.File;
@@ -15,23 +17,23 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@DisplayName("класс ResourceManagerTest должен")
 @ExtendWith(MockitoExtension.class)
 class ResourceDataManagerTest {
 
     private ResourceData resourceData;
-    private final String questionPath = "data.csv";
-    private final String answersPath = "correct.answer.csv";
-    private final List<String> answers = Arrays.asList("Correct answers");
+    private static final String QUESTION_PATH = "data.csv";
+    private static final String CORRECT_ANSWER_CSV = "correct.answer.csv";
     private List<Question> questionList;
 
     @BeforeEach
     public void setUp() {
         ClassLoader cl = getClass().getClassLoader();
 
-        File questions = new File(cl.getResource(questionPath).getFile());
+        File questions = new File(cl.getResource(QUESTION_PATH).getFile());
         Resource questionSource = new FileSystemResource(questions);
 
-        File answers = new File(cl.getResource(answersPath).getFile());
+        File answers = new File(cl.getResource(CORRECT_ANSWER_CSV).getFile());
         Resource answerSource = new FileSystemResource(answers);
 
         resourceData = new ResourceDataManager(questionSource, answerSource);
@@ -41,16 +43,23 @@ class ResourceDataManagerTest {
     }
 
 
+    @DisplayName("корректно парсить файл вопросов")
     @Test
     void correctQuestionFileParsing() {
         assertEquals(5, questionList.size());
     }
 
+    @DisplayName("корректоно парсить файл ответов")
     @Test
     void correctAnswersFileParsing() {
-        assertEquals(answers, resourceData.getAnswers());
+        assertEquals("a", resourceData.getAnswers().get(0).getAnswerAsString());
+        assertEquals("b", resourceData.getAnswers().get(1).getAnswerAsString());
+        assertEquals("a", resourceData.getAnswers().get(2).getAnswerAsString());
+        assertEquals("a", resourceData.getAnswers().get(3).getAnswerAsString());
+        assertNotEquals("a", resourceData.getAnswers().get(4).getAnswerAsString());
     }
 
+    @DisplayName("отделять вопросы в файле")
     @Test
     void correctDefineQuestion() {
         String question = "1.Question";
@@ -59,6 +68,7 @@ class ResourceDataManagerTest {
         assertFalse(resourceData.isQuestion(notQuestion));
     }
 
+    @DisplayName("отделять отвуты в файле")
     @Test
     void correctDefineAnswers() {
         int trueAnswer1 = 1;

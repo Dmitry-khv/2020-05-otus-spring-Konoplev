@@ -9,7 +9,7 @@ public class Answer {
         this.optionAnswer = optionAnswer;
     }
 
-    public String getOptionAnswer() {
+    public String getAnswerAsString() {
         return optionAnswer;
     }
 

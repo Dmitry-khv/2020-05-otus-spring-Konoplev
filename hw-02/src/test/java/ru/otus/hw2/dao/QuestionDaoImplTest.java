@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 import ru.otus.hw2.resourcemanager.ResourceData;
 
@@ -26,16 +27,12 @@ class QuestionDaoImplTest {
     }
 
 
-//    @Test
-//    void returnCorrectQuestion() {
-//        given(questionDao.getQuestions()).willReturn(new Question("test message"));
-//        assertEquals("test message", questionDao.getQuestions().getQuestion());
-//    }
-
     @Test
     void getAnswers() {
-        given(questionDao.getAnswers()).willReturn(Arrays.asList("a", "a", "a", "b"));
-        List<String> answ = Arrays.asList("a", "a", "a", "b");
-        assertEquals(answ, questionDao.getAnswers());
+        given(questionDao.getAnswers()).willReturn(Arrays.asList(new Answer("a"), new Answer("b")));
+        List<String> answ = Arrays.asList("a", "b");
+        for (int i = 0; i < answ.size(); i++) {
+            assertEquals(answ.get(i), questionDao.getAnswers().get(i).getAnswerAsString());
+        }
     }
 }

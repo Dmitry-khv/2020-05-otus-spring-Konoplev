@@ -2,6 +2,7 @@ package ru.otus.hw2.dao;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 import ru.otus.hw2.resourcemanager.ResourceData;
 
@@ -19,7 +20,7 @@ public class QuestionDaoImpl implements QuestionDao {
     }
 
     @Override
-    public List<String> getAnswers() {
+    public List<Answer> getAnswers() {
         return resource.getAnswers();
     }
 }

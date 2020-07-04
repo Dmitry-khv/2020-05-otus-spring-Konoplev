@@ -6,7 +6,7 @@ import ru.otus.hw2.model.Student;
 
 @Service
 @RequiredArgsConstructor
-public class Greeting {
+public class GreetingService {
     private final IOService ioService;
 
     public Student greetStudent() {
