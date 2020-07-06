@@ -2,31 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/PrintService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/PrintServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/dao/MessageDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager/ResourceDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/main/resources/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/main/resources/spring-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/dao/MessageDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/dao/QuestionDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/service/MessageServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/src/test/java/ru/otus/hw1/service/QuestionServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/dao/MessageDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/model/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceData.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceDataManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/resourcemanager/ResourceDataManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hw-01/target/classes/ru/otus/hw1/service/MessageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/test-classes/ru/otus/hw1/dao/MessageDaoImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-01/target/test-classes/ru/otus/hw1/service/MessageServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/TestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +17,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cfqwR81FtzutnZMXCzle5pYBhx" />
@@ -54,6 +39,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -69,37 +55,49 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.otus.hw2.resourcemanager" />
+      <recent name="ru.otus.hw2.dao" />
+      <recent name="ru.otus.hw2.service" />
       <recent name="ru.otus.hw1.service" />
       <recent name="ru.otus.hw1.dao" />
-      <recent name="ru.otus.hw1.resourcemanager" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hw-01/src/main/resources" />
       <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/resourcemanager" />
-      <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/orus/hw1/resourcemanager" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.otus.hw2" />
+      <recent name="ru.otus.hw2.model" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hw-02/src/test/resources" />
+      <recent name="$PROJECT_DIR$/hw-02/src/main/resources" />
+      <recent name="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2" />
+      <recent name="$PROJECT_DIR$/hw-02/src/main/java" />
+      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.orus.hw1.resourcemanager" />
       <recent name="ru.orus.hw1.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw1.Main" />
-      <module name="hw-01" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.Main" />
+      <module name="hw-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw1.*" />
+          <option name="PATTERN" value="ru.otus.hw2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,64 +105,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionDaoImplTest.getMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-01" />
+    <configuration name="QuestionDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw1.dao.*" />
+          <option name="PATTERN" value="ru.otus.hw2.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw1.dao" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw1.dao.QuestionDaoImplTest" />
-      <option name="METHOD_NAME" value="getMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuestionServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-01" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.otus.hw1.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw1.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw1.service.QuestionServiceImplTest" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.dao" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.dao.QuestionDaoImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionServiceImplTest.getFalseMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-01" />
+    <configuration name="ResourceDataManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw1.service.*" />
+          <option name="PATTERN" value="ru.otus.hw2.resourcemanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw1.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw1.service.QuestionServiceImplTest" />
-      <option name="METHOD_NAME" value="getFalseMessage" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResourceDataManagerTest.correctAnswersFileParsing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-02" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.hw2.resourcemanager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
+      <option name="METHOD_NAME" value="correctAnswersFileParsing" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuestionServiceImplTest.getMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-01" />
+    <configuration name="ResourceDataManagerTest.correctDefineAnswers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-02" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw1.service.*" />
+          <option name="PATTERN" value="ru.otus.hw2.resourcemanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw1.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw1.service.QuestionServiceImplTest" />
-      <option name="METHOD_NAME" value="getMessage" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
+      <option name="METHOD_NAME" value="correctDefineAnswers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="JUnit.QuestionServiceImplTest" />
-        <item itemvalue="JUnit.QuestionServiceImplTest.getFalseMessage" />
-        <item itemvalue="JUnit.QuestionServiceImplTest.getMessage" />
-        <item itemvalue="JUnit.QuestionDaoImplTest.getMessage" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ResourceDataManagerTest" />
+        <item itemvalue="JUnit.QuestionDaoImplTest" />
+        <item itemvalue="JUnit.ResourceDataManagerTest.correctAnswersFileParsing" />
+        <item itemvalue="JUnit.ResourceDataManagerTest.correctDefineAnswers" />
       </list>
     </recent_temporary>
   </component>
@@ -192,76 +189,120 @@
       <updated>1590930233379</updated>
       <workItem from="1590930235211" duration="9685000" />
       <workItem from="1591104653844" duration="15550000" />
+      <workItem from="1592902234004" duration="38817000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="100" y="100" width="1080" height="600" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1591185358767">
-      <screen x="0" y="23" width="1280" height="728" />
-    </state>
-    <state x="100" y="100" width="1080" height="600" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.728@0.23.1280.728" timestamp="1591185358767" />
-    <state x="453" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1592399332316">
+    <state x="128" y="0" key="#Project_Structure" timestamp="1593310285333">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="453" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1592399332315" />
+    <state x="128" y="0" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1593310285333" />
+    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1593607516608">
+      <screen x="0" y="23" width="1280" height="728" />
+    </state>
+    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.800@0.0.1280.800" timestamp="1593313226301" />
+    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.728@0.23.1280.728" timestamp="1593607516608" />
+    <state x="353" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593072142349">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="353" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1593072142349" />
+    <state x="453" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1593683692545">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="453" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1593683692545" />
     <state x="124" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591103850177">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="124" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.800@0.0.1280.800" timestamp="1591103850177" />
-    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592397704320">
+    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594029931306">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1592397704320" />
-    <state width="1238" height="196" key="GridCell.Tab.0.bottom" timestamp="1592401723054">
+    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1594029931306" />
+    <state width="1238" height="152" key="GridCell.Tab.0.bottom" timestamp="1594029792428">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1592401723054" />
+    <state width="1238" height="152" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594029792428" />
     <state width="1238" height="205" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1591187706601" />
-    <state width="1238" height="196" key="GridCell.Tab.0.center" timestamp="1592401723050">
+    <state width="1238" height="152" key="GridCell.Tab.0.center" timestamp="1594029792424">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1592401723050" />
+    <state width="1238" height="152" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594029792424" />
     <state width="1238" height="205" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1591187706580" />
-    <state width="1238" height="196" key="GridCell.Tab.0.left" timestamp="1592401723049">
+    <state width="1238" height="152" key="GridCell.Tab.0.left" timestamp="1594029792422">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1592401723049" />
+    <state width="1238" height="152" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594029792422" />
     <state width="1238" height="205" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1591187706579" />
-    <state width="1238" height="196" key="GridCell.Tab.0.right" timestamp="1592401723052">
+    <state width="1238" height="152" key="GridCell.Tab.0.right" timestamp="1594029792426">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="196" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1592401723052" />
+    <state width="1238" height="152" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594029792426" />
     <state width="1238" height="205" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1591187706591" />
-    <state width="1238" height="254" key="GridCell.Tab.1.bottom" timestamp="1591187564611">
+    <state width="1238" height="236" key="GridCell.Tab.1.bottom" timestamp="1593612582748">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1591187564611" />
-    <state width="1238" height="254" key="GridCell.Tab.1.center" timestamp="1591187564606">
+    <state width="1238" height="236" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1593612582748" />
+    <state width="1238" height="236" key="GridCell.Tab.1.center" timestamp="1593612582745">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1591187564606" />
-    <state width="1238" height="254" key="GridCell.Tab.1.left" timestamp="1591187564605">
+    <state width="1238" height="236" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1593612582745" />
+    <state width="1238" height="236" key="GridCell.Tab.1.left" timestamp="1593612582742">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1591187564605" />
-    <state width="1238" height="254" key="GridCell.Tab.1.right" timestamp="1591187564608">
+    <state width="1238" height="236" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1593612582742" />
+    <state width="1238" height="236" key="GridCell.Tab.1.right" timestamp="1593612582746">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="254" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1591187564608" />
-    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1591188032374">
+    <state width="1238" height="236" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1593612582746" />
+    <state x="178" y="62" key="Maven.ArtifactSearchDialog" timestamp="1593071398118">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1591188032374" />
-    <state x="63" y="63" key="new project wizard" timestamp="1590930746251">
+    <state x="178" y="62" key="Maven.ArtifactSearchDialog/0.0.1280.800@0.0.1280.800" timestamp="1593071398118" />
+    <state x="149" y="0" key="SettingsEditor" timestamp="1593840487321">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="63" y="63" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1590930746251" />
-    <state x="305" y="124" key="search.everywhere.popup" timestamp="1591012496566">
+    <state x="149" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1593840487321" />
+    <state x="333" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1593840515463">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="124" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1591012496566" />
+    <state x="333" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1593840515463" />
+    <state x="443" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593605533484">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="443" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1593605533484" />
+    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1593605582273">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1593605582273" />
+    <state x="89" y="122" key="new project wizard" timestamp="1592402704736">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="89" y="122" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1592402704736" />
+    <state x="430" y="27" key="refactoring.ChangeSignatureDialog" timestamp="1593843747950">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="430" y="27" key="refactoring.ChangeSignatureDialog/0.0.1280.800@0.0.1280.800" timestamp="1593843747950" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1593607481048">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1593607481048" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service/MessageServiceImpl.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

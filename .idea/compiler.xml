@@ -7,15 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hw-01" />
+        <module name="hw-02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hw-01" target="13" />
+      <module name="hw-02" target="13" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hw-01" options="-parameters" />
+      <module name="hw-02" options="" />
     </option>
   </component>
 </project>
