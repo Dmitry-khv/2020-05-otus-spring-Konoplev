@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/TestResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/QuestionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/QuestionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/QuestionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/dao/QuestionDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/model/TestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/GreetingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/main/java/ru/otus/hw2/service/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/dao/QuestionDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/dao/QuestionDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/resourcemanager/ResourceDataManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/resourcemanager/ResourceDataManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/service/QuizTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-02/src/test/java/ru/otus/hw2/service/QuizTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -99,7 +91,7 @@
       <recent name="ru.orus.hw1.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ResourceDataManagerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.Main" />
       <module name="hw-02" />
@@ -177,9 +169,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ResourceDataManagerTest" />
         <item itemvalue="JUnit.QuestionDaoImplTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ResourceDataManagerTest.correctAnswersFileParsing" />
         <item itemvalue="JUnit.ResourceDataManagerTest.correctDefineAnswers" />
       </list>
@@ -229,29 +221,29 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="124" y="331" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.800@0.0.1280.800" timestamp="1591103850177" />
-    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593840601844">
+    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594029931306">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1593840601844" />
-    <state width="1238" height="152" key="GridCell.Tab.0.bottom" timestamp="1593845694205">
+    <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1594029931306" />
+    <state width="1238" height="152" key="GridCell.Tab.0.bottom" timestamp="1594029792428">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="152" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1593845694205" />
+    <state width="1238" height="152" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594029792428" />
     <state width="1238" height="205" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1591187706601" />
-    <state width="1238" height="152" key="GridCell.Tab.0.center" timestamp="1593845694196">
+    <state width="1238" height="152" key="GridCell.Tab.0.center" timestamp="1594029792424">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="152" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1593845694196" />
+    <state width="1238" height="152" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594029792424" />
     <state width="1238" height="205" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1591187706580" />
-    <state width="1238" height="152" key="GridCell.Tab.0.left" timestamp="1593845694184">
+    <state width="1238" height="152" key="GridCell.Tab.0.left" timestamp="1594029792422">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="152" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1593845694184" />
+    <state width="1238" height="152" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594029792422" />
     <state width="1238" height="205" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1591187706579" />
-    <state width="1238" height="152" key="GridCell.Tab.0.right" timestamp="1593845694201">
+    <state width="1238" height="152" key="GridCell.Tab.0.right" timestamp="1594029792426">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="152" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1593845694201" />
+    <state width="1238" height="152" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594029792426" />
     <state width="1238" height="205" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1591187706591" />
     <state width="1238" height="236" key="GridCell.Tab.1.bottom" timestamp="1593612582748">
       <screen x="0" y="0" width="1280" height="800" />

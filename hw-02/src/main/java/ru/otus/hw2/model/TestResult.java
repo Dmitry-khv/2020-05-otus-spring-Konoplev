@@ -1,16 +1,12 @@
 package ru.otus.hw2.model;
 
-import lombok.RequiredArgsConstructor;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@RequiredArgsConstructor
 public class TestResult {
 
-    private final Student student;
     private Map<Question, Answer> studentTest = new HashMap<>();
 
     public void addQuestionAndAnswer(Question question, Answer answer) {

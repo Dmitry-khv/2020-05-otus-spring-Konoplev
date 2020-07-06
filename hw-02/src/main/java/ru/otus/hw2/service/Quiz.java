@@ -29,11 +29,18 @@ public class Quiz {
 
     public void run() {
         Student student = greetingService.greetStudent();
-        TestResult testResult = new TestResult(student);
+        TestResult testResult = new TestResult();
         ioService.print("Мы начинаем!");
         ioService.print("___________________");
 
-        readQuestionAndAnswersAsString(testResult);
+        ioService.print("Введите ответ, каждый с новой строки");
+        List<Question> questions = questionService.getQuestions();
+        for (Question question : questions) {
+            readQuestionAsString(question);
+            Answer studentAnswer = writeAnswer();
+            testResult.addQuestionAndAnswer(question, studentAnswer);
+        }
+
 
         boolean isTestOk = testResult.getTestResult(successCountAnswers);
 
@@ -44,18 +51,15 @@ public class Quiz {
         }
     }
 
-    public void readQuestionAndAnswersAsString(TestResult testResult) {
-        ioService.print("Введите ответ, каждый с новой строки");
-        List<Question> questions = questionService.getQuestions();
-        for (Question question : questions) {
-            ioService.print(question.getQuestion());
-            List<Answer> allAnswers = question.getAnswers();
-            for (Answer answer : allAnswers) {
-                ioService.print(answer.getAnswerAsString());
-            }
-
-            Answer studentAnswer = new Answer(ioService.read());
-            testResult.addQuestionAndAnswer(question, studentAnswer);
+    public void readQuestionAsString(Question question) {
+        ioService.print(question.getQuestion());
+        List<Answer> allAnswers = question.getAnswers();
+        for (Answer answer : allAnswers) {
+            ioService.print(answer.getAnswerAsString());
         }
+    }
+
+    public Answer writeAnswer() {
+        return new Answer(ioService.read());
     }
 }
