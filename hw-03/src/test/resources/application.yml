@@ -1,0 +1,6 @@
+application:
+  questionFile: data_{}.csv
+  locale: en
+  questionsCount: 5
+  answersCount: 3
+

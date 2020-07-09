@@ -1,9 +1,12 @@
 package ru.otus.hw2.config;
 
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import ru.otus.hw2.service.IOService;
 import ru.otus.hw2.service.IOServiceImpl;
+
 
 @Configuration
 public class AppConfig {
@@ -12,5 +15,13 @@ public class AppConfig {
     public IOService ioService() {
         IOService ioService = new IOServiceImpl(System.in, System.out);
         return ioService;
+    }
+
+    @Bean
+    public MessageSource messageSource() {
+        ReloadableResourceBundleMessageSource ms = new ReloadableResourceBundleMessageSource();
+        ms.setBasename("classpath:il8n/bundle");
+        ms.setDefaultEncoding("UTF-8");
+        return ms;
     }
 }

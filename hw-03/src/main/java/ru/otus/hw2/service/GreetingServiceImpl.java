@@ -8,13 +8,14 @@ import ru.otus.hw2.model.Student;
 @RequiredArgsConstructor
 public class GreetingServiceImpl implements GreetingService {
     private final IOService ioService;
+    private final MessageSourceService messageSourceService;
 
     @Override
     public Student greetStudent() {
-        ioService.print("Привет, вы готовы к тесту?");
-        ioService.print("Введите ваше имя:");
+        ioService.print(messageSourceService.getMessage("greeting"));
+        ioService.print(messageSourceService.getMessage("firsName"));
         String firstName = ioService.read();
-        ioService.print("Введите вашу фамилию:");
+        ioService.print(messageSourceService.getMessage("lastName"));
         String lastName = ioService.read();
         return new Student(firstName, lastName);
     }

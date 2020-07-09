@@ -2,13 +2,15 @@ package ru.otus.hw2.resourcemanager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
+import ru.otus.hw2.config.YamlProps;
 import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,12 +22,13 @@ public class ResourceDataManager implements ResourceData{
     private static final Logger LOG = LoggerFactory.getLogger(ResourceDataManager.class);
     private final Resource questionSource;
     private final Resource answerSource;
+    private final YamlProps yamlProps;
 
-    @Autowired
-    public ResourceDataManager(@Value("classpath:data.csv") Resource questionSource,
-                               @Value("classpath:correct.answer.csv") Resource answerSource) {
+    public ResourceDataManager(@Value("${application.questionFile}") Resource questionSource,
+                               @Value("${application.answerFile}") Resource answerSource, YamlProps yamlProps) {
         this.questionSource = questionSource;
         this.answerSource = answerSource;
+        this.yamlProps = yamlProps;
     }
 
     @Override

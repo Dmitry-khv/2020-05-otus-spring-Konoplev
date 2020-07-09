@@ -4,14 +4,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
-import ru.otus.hw2.model.Answer;
+import ru.otus.hw2.config.YamlProps;
 import ru.otus.hw2.model.Question;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,9 +22,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class ResourceDataManagerTest {
 
     private ResourceData resourceData;
-    private static final String QUESTION_PATH = "data.csv";
+    private static final String QUESTION_PATH = "data_en.csv";
     private static final String CORRECT_ANSWER_CSV = "correct.answer.csv";
     private List<Question> questionList;
+    @Mock
+    private YamlProps yamlProps;
+
 
     @BeforeEach
     public void setUp() {
@@ -36,10 +39,9 @@ class ResourceDataManagerTest {
         File answers = new File(cl.getResource(CORRECT_ANSWER_CSV).getFile());
         Resource answerSource = new FileSystemResource(answers);
 
-        resourceData = new ResourceDataManager(questionSource, answerSource);
+        resourceData = new ResourceDataManager(questionSource, answerSource, yamlProps);
         questionList = resourceData.getQuestions();
         resourceData.setUpTrueAnswers(questionList);
-
     }
 
 

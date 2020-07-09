@@ -1,8 +1,8 @@
 package ru.otus.hw2.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import ru.otus.hw2.config.YamlProps;
 import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 import ru.otus.hw2.model.Student;
@@ -15,25 +15,27 @@ public class Quiz {
     private final QuestionService questionService;
     private final IOService ioService;
     private final GreetingService greetingService;
-    private final int successCountAnswers;
+    private final YamlProps yamlProps;
+    private final MessageSourceService messageSourceService;
 
 
     @Autowired
     public Quiz(QuestionService questionService, IOService ioService,
-                GreetingService greetingService, @Value("${success.count.answer}") int successCountAnswers) {
+                GreetingService greetingService, YamlProps yamlProps,
+                MessageSourceService messageSourceService) {
         this.questionService = questionService;
         this.ioService = ioService;
         this.greetingService = greetingService;
-        this.successCountAnswers = successCountAnswers;
+        this.yamlProps = yamlProps;
+        this.messageSourceService = messageSourceService;
     }
 
     public void run() {
         Student student = greetingService.greetStudent();
         TestResult testResult = new TestResult();
-        ioService.print("Мы начинаем!");
         ioService.print("___________________");
 
-        ioService.print("Введите ответ, каждый с новой строки");
+        ioService.print(messageSourceService.getMessage("taskQuiz"));
         List<Question> questions = questionService.getQuestions();
         for (Question question : questions) {
             readQuestionAsString(question);
@@ -42,12 +44,12 @@ public class Quiz {
         }
 
 
-        boolean isTestOk = testResult.getTestResult(successCountAnswers);
+        boolean isTestOk = testResult.getTestResult(yamlProps.getAnswersCount());
 
         if (isTestOk) {
-            ioService.print("Поздравляю? Вы молодец!");
+            ioService.print(messageSourceService.getMessage("congrats", student.getFirstName()));
         } else {
-            ioService.print("Не плохое начало, давайте попробуем еще раз!");
+            ioService.print(messageSourceService.getMessage("repeat", student.getFirstName()));
         }
     }
 
