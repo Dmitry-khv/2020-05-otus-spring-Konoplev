@@ -2,35 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/config/YamlProps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/service/MessageSourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/service/MessageSourceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/resources/data_ru.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/resources/il8n/bundle_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/main/resources/il8n/bundle_ru.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/test/java/ru/otus/hw2/config/YamlPropsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/test/java/ru/otus/hw2/service/MessageSourceServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/test/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/test/resources/il8n/bundle_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-03/src/test/resources/il8n/bundle_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-03/src/main/resources/banner.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/config/YamlProps.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/config/YamlProps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/service/GreetingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/service/GreetingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/service/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/service/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/main/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/resources/data_en.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-03/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-03/src/main/resources/correct.answer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/main/resources/correct.answer.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw-03/src/test/java/ru/otus/hw2/resourcemanager/ResourceDataManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/test/java/ru/otus/hw2/resourcemanager/ResourceDataManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/test/java/ru/otus/hw2/service/QuizTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/test/java/ru/otus/hw2/service/QuizTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-03/src/test/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/test/resources/data_en.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-03/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-03/src/test/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -90,9 +70,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.otus.hw2.resourcemanager" />
       <recent name="ru.otus.hw2.service" />
       <recent name="ru.otus.hw2.config" />
-      <recent name="ru.otus.hw2.resourcemanager" />
       <recent name="ru.otus.hw2.dao" />
       <recent name="ru.otus.hw1.service" />
     </key>
@@ -120,7 +100,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
-    <configuration name="MessageSourceServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QuestionDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.hw2.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.dao" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.dao.QuestionDaoImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuizTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw-03" />
       <extension name="coverage">
         <pattern>
@@ -129,54 +124,38 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.otus.hw2.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.service.MessageSourceServiceImplTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.service.QuizTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageSourceServiceImplTest.getMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ResourceDataManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw2.service.*" />
+          <option name="PATTERN" value="ru.otus.hw2.resourcemanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw2.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.service.MessageSourceServiceImplTest" />
-      <option name="METHOD_NAME" value="getMessage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="YamlPropsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.otus.hw2.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw2.config" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.config.YamlPropsTest" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YamlPropsTest.shouldCorrectGetLocaleFromYaml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ResourceDataManagerTest.getAnswers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw-03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw2.config.*" />
+          <option name="PATTERN" value="ru.otus.hw2.resourcemanager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw2.config" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.config.YamlPropsTest" />
-      <option name="METHOD_NAME" value="shouldCorrectGetLocaleFromYaml" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
+      <option name="METHOD_NAME" value="getAnswers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,10 +177,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="JUnit.MessageSourceServiceImplTest.getMessage" />
-        <item itemvalue="JUnit.MessageSourceServiceImplTest" />
-        <item itemvalue="JUnit.YamlPropsTest.shouldCorrectGetLocaleFromYaml" />
-        <item itemvalue="JUnit.YamlPropsTest" />
+        <item itemvalue="JUnit.QuizTest" />
+        <item itemvalue="JUnit.QuestionDaoImplTest" />
+        <item itemvalue="JUnit.ResourceDataManagerTest.getAnswers" />
+        <item itemvalue="JUnit.ResourceDataManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +197,7 @@
       <workItem from="1590930235211" duration="9685000" />
       <workItem from="1591104653844" duration="15550000" />
       <workItem from="1592902234004" duration="38817000" />
-      <workItem from="1594124186054" duration="18445000" />
+      <workItem from="1594124186054" duration="25798000" />
     </task>
     <servers />
   </component>
@@ -233,11 +212,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="128" y="0" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1593310285333" />
-    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1594304512858">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1594392518817">
+      <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.800@0.0.1280.800" timestamp="1594304512858" />
-    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.728@0.23.1280.728" timestamp="1593607516608" />
+    <state x="100" y="85" width="1080" height="660" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1280.728@0.23.1280.728" timestamp="1594392518817" />
     <state x="353" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593072142349">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -258,42 +237,42 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="293" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1594029931306" />
-    <state width="1238" height="261" key="GridCell.Tab.0.bottom" timestamp="1594308881536">
+    <state width="1238" height="261" key="GridCell.Tab.0.bottom" timestamp="1594392501424">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594308881536" />
+    <state width="1238" height="261" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594392501424" />
     <state width="1238" height="205" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1591187706601" />
-    <state width="1238" height="261" key="GridCell.Tab.0.center" timestamp="1594308881532">
+    <state width="1238" height="261" key="GridCell.Tab.0.center" timestamp="1594392501422">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594308881532" />
+    <state width="1238" height="261" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1594392501422" />
     <state width="1238" height="205" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1591187706580" />
-    <state width="1238" height="261" key="GridCell.Tab.0.left" timestamp="1594308881531">
+    <state width="1238" height="261" key="GridCell.Tab.0.left" timestamp="1594392501422">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594308881531" />
+    <state width="1238" height="261" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1594392501422" />
     <state width="1238" height="205" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1591187706579" />
-    <state width="1238" height="261" key="GridCell.Tab.0.right" timestamp="1594308881534">
+    <state width="1238" height="261" key="GridCell.Tab.0.right" timestamp="1594392501423">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594308881534" />
+    <state width="1238" height="261" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1594392501423" />
     <state width="1238" height="205" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1591187706591" />
-    <state width="1238" height="261" key="GridCell.Tab.1.bottom" timestamp="1594308881544">
+    <state width="1238" height="261" key="GridCell.Tab.1.bottom" timestamp="1594377669371">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594308881544" />
-    <state width="1238" height="261" key="GridCell.Tab.1.center" timestamp="1594308881539">
+    <state width="1238" height="261" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1594377669371" />
+    <state width="1238" height="261" key="GridCell.Tab.1.center" timestamp="1594377669368">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1594308881539" />
-    <state width="1238" height="261" key="GridCell.Tab.1.left" timestamp="1594308881538">
+    <state width="1238" height="261" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1594377669368" />
+    <state width="1238" height="261" key="GridCell.Tab.1.left" timestamp="1594377669367">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1594308881538" />
-    <state width="1238" height="261" key="GridCell.Tab.1.right" timestamp="1594308881541">
+    <state width="1238" height="261" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1594377669367" />
+    <state width="1238" height="261" key="GridCell.Tab.1.right" timestamp="1594377669369">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="261" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1594308881541" />
+    <state width="1238" height="261" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1594377669369" />
     <state width="1238" height="236" key="GridCell.Tab.2.bottom" timestamp="1594305089178">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -330,10 +309,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="443" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1593605533484" />
-    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594301320308">
+    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594388277147">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1594301320308" />
+    <state x="408" y="213" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.800@0.0.1280.800" timestamp="1594388277147" />
     <state x="228" y="62" key="editAsTableFormatDialogDimension" timestamp="1594300547054">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -361,7 +340,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/hw-03/src/main/java/ru/otus/hw2/config/YamlProps.java</url>
-          <line>21</line>
+          <line>23</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

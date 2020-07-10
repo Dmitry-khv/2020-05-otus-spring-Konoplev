@@ -2,39 +2,30 @@ package ru.otus.hw2.resourcemanager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import ru.otus.hw2.config.YamlProps;
 import ru.otus.hw2.model.Answer;
 import ru.otus.hw2.model.Question;
 
-import javax.annotation.PostConstruct;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
 public class ResourceDataManager implements ResourceData{
     private static final Logger LOG = LoggerFactory.getLogger(ResourceDataManager.class);
-    private final Resource questionSource;
-    private final Resource answerSource;
     private final YamlProps yamlProps;
 
-    public ResourceDataManager(@Value("${application.questionFile}") Resource questionSource,
-                               @Value("${application.answerFile}") Resource answerSource, YamlProps yamlProps) {
-        this.questionSource = questionSource;
-        this.answerSource = answerSource;
+    public ResourceDataManager(YamlProps yamlProps) {
         this.yamlProps = yamlProps;
     }
 
     @Override
     public List<Question> getQuestions() {
         List<Question> questionList = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(questionSource.getFile()))) {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream is = classLoader.getResourceAsStream(yamlProps.getQuestionFile());
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
             String line;
             Question question = new Question();
             while ((line = reader.readLine()) != null) {
@@ -58,7 +49,9 @@ public class ResourceDataManager implements ResourceData{
     }
 
     public void setUpTrueAnswers(List<Question> questionList) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(answerSource.getFile()))) {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream is = classLoader.getResourceAsStream(yamlProps.getAnswerFile());
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
             String trueAnswer;
             int count = 0;
             while ((trueAnswer = reader.readLine()) != null) {
@@ -92,7 +85,9 @@ public class ResourceDataManager implements ResourceData{
     @Override
     public List<Answer> getAnswers() {
         List<Answer> answersList = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(answerSource.getFile()))){
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream is = classLoader.getResourceAsStream(yamlProps.getAnswerFile());
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
             String answer;
             while((answer = reader.readLine()) != null) {
                 answersList.add(new Answer(answer));
