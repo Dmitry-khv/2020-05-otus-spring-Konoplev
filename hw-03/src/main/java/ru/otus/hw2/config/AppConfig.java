@@ -13,12 +13,4 @@ public class AppConfig {
     public IOService ioService() {
         return new IOServiceImpl(System.in, System.out);
     }
-
-//    @Bean
-//    public MessageSource messageSource() {
-//        ReloadableResourceBundleMessageSource ms = new ReloadableResourceBundleMessageSource();
-//        ms.setBasename("classpath:i18n/bundle");
-//        ms.setDefaultEncoding("UTF-8");
-//        return ms;
-//    }
 }

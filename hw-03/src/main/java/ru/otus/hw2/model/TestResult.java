@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestResult {
 
-    private Map<Question, Answer> studentTest = new HashMap<>();
+    private final Map<Question, Answer> studentTest = new HashMap<>();
 
     public void addQuestionAndAnswer(Question question, Answer answer) {
         studentTest.put(question, answer);

@@ -2,9 +2,7 @@ package ru.otus.hw2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
-import ru.otus.hw2.config.YamlProps;
 import ru.otus.hw2.service.Quiz;
 
 @SpringBootApplication
