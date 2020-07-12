@@ -8,7 +8,6 @@ import ru.otus.hw2.config.YamlProps;
 import ru.otus.hw2.service.Quiz;
 
 @SpringBootApplication
-@EnableConfigurationProperties(YamlProps.class)
 public class Main {
 
     public static void main(String[] args) {

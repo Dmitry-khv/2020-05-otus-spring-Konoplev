@@ -1,5 +1,6 @@
 package ru.otus.hw2.resourcemanager;
 
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -12,13 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class ResourceDataManager implements ResourceData{
     private static final Logger LOG = LoggerFactory.getLogger(ResourceDataManager.class);
     private final YamlProps yamlProps;
-
-    public ResourceDataManager(YamlProps yamlProps) {
-        this.yamlProps = yamlProps;
-    }
 
     @Override
     public List<Question> getQuestions() {
@@ -65,7 +63,7 @@ public class ResourceDataManager implements ResourceData{
                 count++;
             }
         } catch (IOException e) {
-
+            LOG.error("AnswerFile not found {}", e);
         }
     }
 

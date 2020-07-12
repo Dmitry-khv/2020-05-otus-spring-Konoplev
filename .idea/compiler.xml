@@ -12,6 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="2020-05-otus-spring-Konoplev" target="1.5" />
       <module name="hw-01" target="13" />
       <module name="hw-02" target="13" />
       <module name="hw-03" target="11" />

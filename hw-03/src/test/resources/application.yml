@@ -1,3 +1,7 @@
+spring:
+  messages:
+    basename: i18n/bundle
+
 application:
   questionFile: data_{}.csv
   answerFile: correct.answer.csv

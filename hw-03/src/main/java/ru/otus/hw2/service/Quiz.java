@@ -1,5 +1,6 @@
 package ru.otus.hw2.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.otus.hw2.config.YamlProps;
@@ -11,6 +12,7 @@ import ru.otus.hw2.model.TestResult;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class Quiz {
     private final QuestionService questionService;
     private final IOService ioService;
@@ -18,17 +20,6 @@ public class Quiz {
     private final YamlProps yamlProps;
     private final MessageSourceService messageSourceService;
 
-
-    @Autowired
-    public Quiz(QuestionService questionService, IOService ioService,
-                GreetingService greetingService, YamlProps yamlProps,
-                MessageSourceService messageSourceService) {
-        this.questionService = questionService;
-        this.ioService = ioService;
-        this.greetingService = greetingService;
-        this.yamlProps = yamlProps;
-        this.messageSourceService = messageSourceService;
-    }
 
     public void run() {
         Student student = greetingService.greetStudent();

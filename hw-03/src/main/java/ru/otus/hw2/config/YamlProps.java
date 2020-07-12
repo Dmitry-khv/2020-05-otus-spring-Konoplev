@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Locale;
 
+@Component
 @Getter
 @Setter
-@Component
 @ConfigurationProperties(prefix = "application")
 public class YamlProps {
     private String questionFile;
