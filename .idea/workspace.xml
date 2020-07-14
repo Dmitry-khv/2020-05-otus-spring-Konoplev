@@ -2,7 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hw-03/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/config/YamlProps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/dao/QuestionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/dao/QuestionDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/model/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/model/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/model/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/model/TestResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/resourcemanager/ResourceData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/resourcemanager/ResourceDataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/GreetingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/GreetingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/IOService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/IOServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/MessageSourceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/MessageSourceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/QuestionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/QuestionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/java/ru/otus/hw2/service/Quiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/correct.answer.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/data_en.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/data_ru.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/i18n/bundle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/i18n/bundle_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/main/resources/i18n/bundle_ru.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/java/ru/otus/hw2/config/YamlPropsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/java/ru/otus/hw2/dao/QuestionDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/java/ru/otus/hw2/resourcemanager/ResourceDataManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/java/ru/otus/hw2/service/MessageSourceServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/java/ru/otus/hw2/service/QuizTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/resources/correct.answer.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/resources/data_en.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/resources/i18n/bundle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/resources/i18n/bundle_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hw-04/src/test/resources/i18n/bundle_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +93,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw-03/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +106,10 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.orus.hw1.resourcemanager" />
+      <recent name="ru.orus.hw1.dao" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ru.otus.hw2.resourcemanager" />
       <recent name="ru.otus.hw2.service" />
@@ -72,27 +120,23 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.otus.hw2" />
+      <recent name="ru.otus.hw2.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/hw-03/src/main/resources" />
+      <recent name="$PROJECT_DIR$/hw-03/src/test/resources" />
+      <recent name="$PROJECT_DIR$/hw-03/src/test" />
+      <recent name="$PROJECT_DIR$/hw-02/src/test/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hw-03" />
       <recent name="$PROJECT_DIR$/hw-03/src/main/resources/i18n" />
       <recent name="$PROJECT_DIR$/hw-03/src/main/resources" />
       <recent name="$PROJECT_DIR$/hw-01/src/main/resources" />
       <recent name="$PROJECT_DIR$/hw-01/src/main/java/ru/otus/hw1/service" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.otus.hw2" />
-      <recent name="ru.otus.hw2.model" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/hw-03/src/main/resources" />
-      <recent name="$PROJECT_DIR$/hw-03/src/test/resources" />
-      <recent name="$PROJECT_DIR$/hw-03/src/test" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/hw-02/src/test/resources" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.orus.hw1.resourcemanager" />
-      <recent name="ru.orus.hw1.dao" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main">
@@ -168,6 +212,53 @@
       <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
       <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="hw-01" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="hw-01" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
