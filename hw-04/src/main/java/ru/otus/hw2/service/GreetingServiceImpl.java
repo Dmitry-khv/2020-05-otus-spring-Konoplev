@@ -11,7 +11,7 @@ public class GreetingServiceImpl implements GreetingService {
     private final MessageSourceService messageSourceService;
 
     @Override
-    public Student greetStudent() {
+    public Student greetAndGetStudent() {
         ioService.print(messageSourceService.getMessage("greeting"));
         ioService.print(messageSourceService.getMessage("firsName"));
         String firstName = ioService.read();
@@ -19,4 +19,5 @@ public class GreetingServiceImpl implements GreetingService {
         String lastName = ioService.read();
         return new Student(firstName, lastName);
     }
+
 }

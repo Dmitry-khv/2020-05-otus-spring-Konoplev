@@ -21,7 +21,7 @@ public class Quiz {
 
 
     public void run() {
-        Student student = greetingService.greetStudent();
+        Student student = greetingService.greetAndGetStudent();
         TestResult testResult = new TestResult();
         ioService.print("___________________");
 

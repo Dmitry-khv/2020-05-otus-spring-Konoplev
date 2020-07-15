@@ -5,6 +5,6 @@ spring:
 application:
   questionFile: data_{}.csv
   answerFile: correct.answer.csv
-  locale: en
+  locale: ru
   questionsCount: 5
   answersCount: 3
