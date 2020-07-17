@@ -16,4 +16,10 @@
         <module>hw-03</module>
         <module>hw-04</module>
     </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.1.RELEASE</version>
+    </parent>
 </project>

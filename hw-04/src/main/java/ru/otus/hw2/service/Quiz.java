@@ -18,11 +18,13 @@ public class Quiz {
     private final GreetingService greetingService;
     private final YamlProps yamlProps;
     private final MessageSourceService messageSourceService;
+    private TestResult testResult;
+    private boolean isTestDone;
 
 
     public void run() {
         Student student = greetingService.greetAndGetStudent();
-        TestResult testResult = new TestResult();
+        testResult = new TestResult();
         ioService.print("___________________");
 
         ioService.print(messageSourceService.getMessage("taskQuiz"));
@@ -41,6 +43,7 @@ public class Quiz {
         } else {
             ioService.print(messageSourceService.getMessage("repeat", student.getFirstName()));
         }
+        isTestDone = true;
     }
 
     public void readQuestionAsString(Question question) {
@@ -53,5 +56,14 @@ public class Quiz {
 
     public Answer writeAnswer() {
         return new Answer(ioService.read());
+    }
+
+    public String getStudentTestResultAsString() {
+        return messageSourceService.getMessage("result",
+                String.valueOf(testResult.getCorrectStudentAnswers()));
+    }
+
+    public boolean isTestDone() {
+        return isTestDone;
     }
 }

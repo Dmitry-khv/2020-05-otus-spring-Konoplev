@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
 public class TestResult {
 
     private final Map<Question, Answer> studentTest = new HashMap<>();
+    private int correctStudentAnswers;
 
     public void addQuestionAndAnswer(Question question, Answer answer) {
         studentTest.put(question, answer);
@@ -25,8 +27,11 @@ public class TestResult {
                 }
             }
         });
-        int correctStudentAnswers = correctCountAnswers.get();
+        correctStudentAnswers = correctCountAnswers.get();
         return correctStudentAnswers >= shouldBeCorrectAnswers;
     }
 
+    public int getCorrectStudentAnswers() {
+        return correctStudentAnswers;
+    }
 }

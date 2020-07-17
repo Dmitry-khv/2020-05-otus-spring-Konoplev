@@ -1,6 +1,9 @@
 spring:
   messages:
     basename: i18n/bundle
+  shell:
+    interactive:
+      enabled: false
 
 application:
   questionFile: data_{}.csv

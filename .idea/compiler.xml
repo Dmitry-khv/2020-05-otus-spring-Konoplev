@@ -13,7 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="2020-05-otus-spring-Konoplev" target="1.5" />
+      <module name="2020-05-otus-spring-Konoplev" target="1.8" />
       <module name="hw-01" target="13" />
       <module name="hw-02" target="13" />
       <module name="hw-03" target="11" />
@@ -22,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="2020-05-otus-spring-Konoplev" options="-parameters" />
       <module name="hw-01" options="-parameters" />
       <module name="hw-02" options="" />
       <module name="hw-03" options="-parameters" />

@@ -7,7 +7,7 @@
     <bean id="resourceManager" class="ru.otus.hw1.resourcemanager.ResourceDataManager">
         <constructor-arg value="classpath:data.csv"/>
     </bean>
-    <bean id="messageDao" class="ru.otus.hw1.dao.MessageDaoImpl">
+    <bean id="questionDao" class="ru.otus.hw1.dao.MessageDaoImpl">
         <constructor-arg name="resource" ref="resourceManager"/>
     </bean>
     <bean id="printService" class="ru.otus.hw1.service.PrintServiceImpl">
@@ -16,8 +16,8 @@
                   class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
         </constructor-arg>
     </bean>
-    <bean id="messageService" class="ru.otus.hw1.service.MessageServiceImpl">
-        <constructor-arg name="messageDao" ref="messageDao"/>
+    <bean id="questionService" class="ru.otus.hw1.service.MessageServiceImpl">
+        <constructor-arg name="questionDao" ref="questionDao"/>
         <constructor-arg name="printService" ref="printService"/>
     </bean>
 
