@@ -148,8 +148,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw2.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.service.QuizTest" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.config" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.config.YamlPropsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,13 +159,11 @@
       <module name="hw-04" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.hw2.resourcemanager.*" />
+          <option name="PATTERN" value="ru.otus.hw2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.hw2.resourcemanager" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.resourcemanager.ResourceDataManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.otus.hw2.Main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
