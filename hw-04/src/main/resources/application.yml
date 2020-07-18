@@ -1,0 +1,10 @@
+spring:
+  messages:
+    basename: i18n/bundle
+
+application:
+  questionFile: data_{}.csv
+  answerFile: correct.answer.csv
+  locale: ru
+  questionsCount: 5
+  answersCount: 3
