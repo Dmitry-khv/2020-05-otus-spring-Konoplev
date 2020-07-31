@@ -33,7 +33,7 @@ public class ApplicationShellCommands {
         return String.format("Got book: %s", book.toString());
     }
 
-    @ShellMethod(value = "get book by title", key = {"n", "name"})
+    @ShellMethod(value = "get book by title", key = {"t", "titile"})
     public String getBookByTitle(String title) {
         Book book = serviceBook.getBookByTitle(title);
         return String.format("Got book: %s", book.toString());

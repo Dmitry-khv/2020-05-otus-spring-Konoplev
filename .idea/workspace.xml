@@ -20,33 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5b2f189-034e-46cf-aee7-e2d03b48a1ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/domain/Author.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/domain/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/domain/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/repository/AuthorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/repository/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/repository/GenreDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/repository/impl/AuthorDaoJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/repository/impl/BookDaoJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/repository/impl/GenreDaoJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/service/DBServiceAuthor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/service/DBServiceBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/service/DBServiceGenre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/service/impl/DBServiceAuthorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/service/impl/DBServiceBookImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/service/impl/DBServiceGenreImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/shell/ApplicationShellCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/main/resources/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/test/java/ru/otus/library/repository/impl/AuthorDaoJdbcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/test/java/ru/otus/library/repository/impl/BookDaoJdbcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/test/java/ru/otus/library/repository/impl/GenreDaoJdbcTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/test/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw-05/src/test/resources/data-test.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-05/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw-05/src/main/java/ru/otus/library/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw-05/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hw-05/src/test/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +118,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Main (1)">
+    <configuration name="AuthorDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-05" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.AuthorDaoJdbcTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BookDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hw-05" />
       <extension name="coverage">
@@ -154,22 +144,6 @@
       <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
       <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.BookDaoJdbcTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookDaoJdbcTest.shouldGetBookById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-05" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.BookDaoJdbcTest" />
-      <option name="METHOD_NAME" value="shouldGetBookById" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -284,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GenreDaoJdbcTest" />
+        <item itemvalue="JUnit.BookDaoJdbcTest" />
+        <item itemvalue="JUnit.AuthorDaoJdbcTest" />
         <item itemvalue="JUnit.BookDaoJdbcTest.shouldMakeChangeInBook" />
         <item itemvalue="JUnit.BookDaoJdbcTest.shouldGetBookByTitle" />
-        <item itemvalue="JUnit.BookDaoJdbcTest" />
-        <item itemvalue="JUnit.BookDaoJdbcTest.shouldGetBookById" />
-        <item itemvalue="JUnit.GenreDaoJdbcTest" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +283,7 @@
       <workItem from="1595002666800" duration="4718000" />
       <workItem from="1595238789011" duration="28384000" />
       <workItem from="1595455336096" duration="1087000" />
-      <workItem from="1595936841751" duration="28547000" />
+      <workItem from="1595936841751" duration="29654000" />
     </task>
     <servers />
   </component>
@@ -381,42 +355,42 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="100" y="100" width="1080" height="600" key="DiffContextDialog/0.0.1280.800@0.0.1280.800" timestamp="1594935921565" />
-    <state width="1238" height="159" key="GridCell.Tab.0.bottom" timestamp="1596165020788">
+    <state width="1238" height="246" key="GridCell.Tab.0.bottom" timestamp="1596168081859">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1596165020788" />
+    <state width="1238" height="246" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1596168081859" />
     <state width="1238" height="293" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1595421669737" />
-    <state width="1238" height="159" key="GridCell.Tab.0.center" timestamp="1596165020785">
+    <state width="1238" height="246" key="GridCell.Tab.0.center" timestamp="1596168081856">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1596165020785" />
+    <state width="1238" height="246" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1596168081856" />
     <state width="1238" height="293" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1595421669725" />
-    <state width="1238" height="159" key="GridCell.Tab.0.left" timestamp="1596165020784">
+    <state width="1238" height="246" key="GridCell.Tab.0.left" timestamp="1596168081854">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1596165020784" />
+    <state width="1238" height="246" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1596168081854" />
     <state width="1238" height="293" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1595421669710" />
-    <state width="1238" height="159" key="GridCell.Tab.0.right" timestamp="1596165020787">
+    <state width="1238" height="246" key="GridCell.Tab.0.right" timestamp="1596168081858">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1596165020787" />
+    <state width="1238" height="246" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1596168081858" />
     <state width="1238" height="293" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1595421669728" />
-    <state width="1238" height="159" key="GridCell.Tab.1.bottom" timestamp="1596164317912">
+    <state width="1238" height="246" key="GridCell.Tab.1.bottom" timestamp="1596168081866">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1596164317912" />
-    <state width="1238" height="159" key="GridCell.Tab.1.center" timestamp="1596164317908">
+    <state width="1238" height="246" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1596168081866" />
+    <state width="1238" height="246" key="GridCell.Tab.1.center" timestamp="1596168081862">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1596164317908" />
-    <state width="1238" height="159" key="GridCell.Tab.1.left" timestamp="1596164317906">
+    <state width="1238" height="246" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1596168081862" />
+    <state width="1238" height="246" key="GridCell.Tab.1.left" timestamp="1596168081861">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1596164317906" />
-    <state width="1238" height="159" key="GridCell.Tab.1.right" timestamp="1596164317910">
+    <state width="1238" height="246" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1596168081861" />
+    <state width="1238" height="246" key="GridCell.Tab.1.right" timestamp="1596168081864">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="159" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1596164317910" />
+    <state width="1238" height="246" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1596168081864" />
     <state width="1238" height="278" key="GridCell.Tab.2.bottom" timestamp="1596161684655">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
