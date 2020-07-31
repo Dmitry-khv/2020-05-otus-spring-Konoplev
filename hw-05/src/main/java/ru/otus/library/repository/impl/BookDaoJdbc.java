@@ -60,7 +60,9 @@ public class BookDaoJdbc implements BookDao {
     public Optional<Book> getBookById(long id) {
         Map<String, Object> params = Collections.singletonMap("id", id);
         try {
-            String select = "select b.id, b.title, b.author_id, a.name, b.genre_id, g.genre from books b inner join authors a on (b.author_id = a.id) inner join genres g on (b.genre_id = g.id) where b.id= :id";
+            String select = "select b.id, b.title, b.author_id, a.name, b.genre_id, g.genre from books b " +
+                    "inner join authors a on (b.author_id = a.id) " +
+                    "inner join genres g on (b.genre_id = g.id) where b.id= :id";
             Book book = jdbcOperations.queryForObject(select, params, new BookMapper());
             return Optional.ofNullable(book);
         } catch (EmptyResultDataAccessException e) {
@@ -73,7 +75,9 @@ public class BookDaoJdbc implements BookDao {
     public Optional<Book> getBookByTitle(String title) {
         Map<String, Object> params = Collections.singletonMap("title", title);
         try {
-            String select = "select b.id, b.title, b.author_id, a.name, b.genre_id, g.genre from books b inner join authors a on (b.author_id = a.id) inner join genres g on (b.genre_id = g.id) where b.title= :title";
+            String select = "select b.id, b.title, b.author_id, a.name, b.genre_id, g.genre from books b " +
+                    "inner join authors a on (b.author_id = a.id) " +
+                    "inner join genres g on (b.genre_id = g.id) where b.title= :title";
             Book book = jdbcOperations.queryForObject(select, params, new BookMapper());
             return Optional.ofNullable(book);
         } catch (EmptyResultDataAccessException e) {
@@ -84,7 +88,9 @@ public class BookDaoJdbc implements BookDao {
 
     @Override
     public List<Book> getAllBook() {
-        String select = "select b.id, b.title, b.author_id, a.name, b.genre_id, g.genre from books b inner join authors a on (b.author_id = a.id) inner join genres g on (b.genre_id = g.id)";
+        String select = "select b.id, b.title, b.author_id, a.name, b.genre_id, g.genre from books b " +
+                "inner join authors a on (b.author_id = a.id) " +
+                "inner join genres g on (b.genre_id = g.id)";
         List<Book> books = jdbcOperations.query(select, new BookMapper());
         return books;
     }
