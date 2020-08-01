@@ -38,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="hw05" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -114,79 +114,60 @@
       <recent name="ru.orus.hw1.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main (1)">
-    <configuration name="AuthorDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-05" />
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="MessageSourceServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-04" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
+          <option name="PATTERN" value="ru.otus.hw2.shell.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.AuthorDaoJdbcTest" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.service.MessageSourceServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-05" />
+    <configuration name="QuizTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-04" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
+          <option name="PATTERN" value="ru.otus.hw2.shell.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.BookDaoJdbcTest" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.config" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.config.YamlPropsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookDaoJdbcTest.shouldGetBookByTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-05" />
+    <configuration name="ResourceDataManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-04" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
+          <option name="PATTERN" value="ru.otus.hw2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.BookDaoJdbcTest" />
-      <option name="METHOD_NAME" value="shouldGetBookByTitle" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookDaoJdbcTest.shouldMakeChangeInBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-05" />
+    <configuration name="YamlPropsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hw-04" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
+          <option name="PATTERN" value="ru.otus.hw2.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.BookDaoJdbcTest" />
-      <option name="METHOD_NAME" value="shouldMakeChangeInBook" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GenreDaoJdbcTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hw-05" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.otus.library.repository.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.otus.library.repository.impl" />
-      <option name="MAIN_CLASS_NAME" value="ru.otus.library.repository.impl.GenreDaoJdbcTest" />
+      <option name="PACKAGE_NAME" value="ru.otus.hw2.config" />
+      <option name="MAIN_CLASS_NAME" value="ru.otus.hw2.config.YamlPropsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -246,8 +227,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="hw-03" />
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="hw-04" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.otus.hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.otus.hw2.Main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -255,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GenreDaoJdbcTest" />
-        <item itemvalue="JUnit.BookDaoJdbcTest" />
-        <item itemvalue="JUnit.AuthorDaoJdbcTest" />
-        <item itemvalue="JUnit.BookDaoJdbcTest.shouldMakeChangeInBook" />
-        <item itemvalue="JUnit.BookDaoJdbcTest.shouldGetBookByTitle" />
+        <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="JUnit.YamlPropsTest" />
+        <item itemvalue="JUnit.ResourceDataManagerTest" />
+        <item itemvalue="JUnit.QuizTest" />
+        <item itemvalue="JUnit.MessageSourceServiceImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -408,6 +395,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="178" y="62" key="Maven.ArtifactSearchDialog/0.0.1280.800@0.0.1280.800" timestamp="1593071398118" />
+    <state x="128" y="69" key="MergeDialog" timestamp="1596285283544">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="128" y="69" key="MergeDialog/0.0.1280.800@0.0.1280.800" timestamp="1596285283544" />
     <state x="37" y="23" width="1024" height="728" key="SettingsEditor" timestamp="1595248187957">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -416,10 +407,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="200" height="441" key="SqlResolveConfigurable/0.0.1280.800@0.0.1280.800" timestamp="1595238459484" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1594031414780">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1596285532272">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1594031414780" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1596285532272" />
     <state x="333" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1593840515463">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -440,6 +431,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="228" y="62" key="editAsTableFormatDialogDimension/0.0.1280.800@0.0.1280.800" timestamp="1594300547054" />
+    <state x="357" y="120" key="git4idea.branch.GitSmartOperationDialog" timestamp="1596285309247">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="357" y="120" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.800@0.0.1280.800" timestamp="1596285309247" />
     <state x="89" y="122" key="new project wizard" timestamp="1595542487924">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
