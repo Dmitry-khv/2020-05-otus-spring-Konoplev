@@ -34,7 +34,7 @@ public class ApplicationShellCommands {
         return String.format("Got book: %s", book);
     }
 
-    @ShellMethod(value = "get book by title", key = {"t", "titile"})
+    @ShellMethod(value = "get book by title", key = {"t", "title"})
     public String getBookByTitle(String title) {
         List<Book> books = serviceBook.getBookByTitle(title);
         return String.format("Books with tittle: %s\n%s", title, books.stream()
@@ -42,30 +42,27 @@ public class ApplicationShellCommands {
                 .collect(Collectors.joining("\n")));
     }
 
-    @ShellMethod(value = "get list of books", key = {"l", "list"})
+    @ShellMethod(value = "get list of books", key = "list")
     public String getAllBooks() {
         return String.format("Books:\n%s", serviceBook.getListBooks().stream()
                 .map(Book::toString)
                 .collect(Collectors.joining("\n")));
     }
 
-    //u 1 "Властелин колец" Маяковский Стихи
-    @ShellMethod(value = "update book", key = {"u", "update"})
+    //upd 1 "Властелин колец" Маяковский Стихи
+    @ShellMethod(value = "update book", key = {"upd", "update"})
     public String updateBookTitleById(long id, String title) {
         serviceBook.updateBookTitle(id, title);
-//        Book book = serviceBook.getBookById(id);
-//        book.setTitle(title);
-//        serviceBook.saveBook(book);
         return String.format("Book updated id:%d", id);
     }
 
-    @ShellMethod(value = "remove book by id", key = {"r", "remove"})
+    @ShellMethod(value = "remove book by id", key = {"rm", "remove"})
     public String removeBookById(long id) {
         serviceBook.deleteBookById(id);
         return String.format("book was deleted id:%d", id);
     }
 
-    @ShellMethod(value = "get comments by book id", key = {"ci", "comment-id"})
+    @ShellMethod(value = "get comments by book id", key = {"cid", "comment-id"})
     public String getCommentsForBook(long id) {
         List<Comment> comments = serviceComment.getAllCommentsByBookId(id);
         if(!comments.isEmpty()) {

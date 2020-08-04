@@ -10,7 +10,6 @@ import ru.otus.library.domain.Comment;
 import ru.otus.library.repository.jpa.CommentDaoJpa;
 import ru.otus.library.service.DBServiceComment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository

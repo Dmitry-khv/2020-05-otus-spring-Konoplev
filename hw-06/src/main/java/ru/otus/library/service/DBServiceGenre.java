@@ -9,5 +9,4 @@ public interface DBServiceGenre {
     Genre getGenreById(long id);
     Genre getGenreByName(String name);
     List<Genre> getListGenres();
-    long checkGenreInTable(String genreName);
 }

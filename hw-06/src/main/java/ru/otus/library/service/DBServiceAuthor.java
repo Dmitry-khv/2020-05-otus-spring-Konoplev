@@ -10,5 +10,4 @@ public interface DBServiceAuthor {
     Author getAuthorById(long id);
     Author getAuthorByName(String name);
     List<Author> getListAuthors();
-    long checkAuthorInTable(String name);
 }

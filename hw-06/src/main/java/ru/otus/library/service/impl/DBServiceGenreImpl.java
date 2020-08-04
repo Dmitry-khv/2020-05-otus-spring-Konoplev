@@ -46,19 +46,4 @@ public class DBServiceGenreImpl implements DBServiceGenre {
         return genreDao.getAllGenres();
     }
 
-    @Override
-    @Transactional
-    public long checkGenreInTable(String genreName) {
-        if(genreName != null) {
-            Genre genre = getGenreByName(genreName);
-            if (genre != null) {
-                return genre.getId();
-            } else {
-                return addGenre(new Genre(genreName));
-            }
-        } else {
-            LOG.error("genre name is null");
-            return addGenre(new Genre());
-        }
-    }
 }

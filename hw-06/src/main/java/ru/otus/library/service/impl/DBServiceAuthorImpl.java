@@ -53,20 +53,4 @@ public class DBServiceAuthorImpl implements DBServiceAuthor {
     public List<Author> getListAuthors() {
         return authorDao.getAllAuthors();
     }
-
-    @Override
-    @Transactional
-    public long checkAuthorInTable(String name) {
-        if(name != null) {
-            Author author = getAuthorByName(name);
-            if (author != null) {
-                return author.getId();
-            } else {
-                return addAuthor(new Author(name));
-            }
-        } else {
-            LOG.error("author name is null");
-            return addAuthor(new Author());
-        }
-    }
 }

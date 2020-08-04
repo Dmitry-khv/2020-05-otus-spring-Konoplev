@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Genre;
-import ru.otus.library.repository.BookDao;
 import ru.otus.library.repository.jpa.AuthorDaoJpa;
 import ru.otus.library.repository.jpa.BookDaoJpa;
 import ru.otus.library.repository.jpa.GenreDaoJpa;
