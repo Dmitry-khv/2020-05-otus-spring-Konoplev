@@ -21,21 +21,9 @@ public class AuthorDaoJpa implements AuthorDao {
     private EntityManager em;
 
     @Override
-    public long addAuthor(Author author) {
-        if(author.getId() == 0) {
-            em.persist(author);
-        } else {
-            em.merge(author);
-        }
-        return author.getId();
-    }
-
-    @Override
     public void removeAuthor(long id) {
-        String remove = "delete from Author a where a.id= :id";
-        Query query = em.createQuery(remove);
-        query.setParameter("id" ,id);
-        query.executeUpdate();
+        Author author = em.find(Author.class, id);
+        em.remove(author);
     }
 
     @Override
@@ -55,12 +43,5 @@ public class AuthorDaoJpa implements AuthorDao {
             LOG.info("author not found name, add {}", name);
         }
         return Optional.ofNullable(author);
-    }
-
-    @Override
-    public List<Author> getAllAuthors() {
-        String getAll = "select a from Author a";
-        Query query = em.createQuery(getAll, Author.class);
-        return query.getResultList();
     }
 }

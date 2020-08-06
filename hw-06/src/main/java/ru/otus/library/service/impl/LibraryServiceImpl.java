@@ -6,16 +6,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
-import ru.otus.library.domain.Genre;
+import ru.otus.library.domain.Comment;
 import ru.otus.library.repository.jpa.AuthorDaoJpa;
 import ru.otus.library.repository.jpa.BookDaoJpa;
 import ru.otus.library.repository.jpa.GenreDaoJpa;
 import ru.otus.library.service.LibraryService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -54,14 +55,20 @@ public class LibraryServiceImpl implements LibraryService {
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public Book getBookById(long id) {
-        Optional<Book> book = bookDao.getBookById(id);
-        return book.orElse(null);
+        Book transactionalBook = bookDao.getBookById(id).orElse(new Book());
+        Book book = Book.newBuilder()
+                .setId(id)
+                .setTitle(transactionalBook.getTitle())
+                .setAuthor(transactionalBook.getAuthor())
+                .setGenre(transactionalBook.getGenre())
+                .build();
+        return book;
     }
 
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<Book> getBookByTitle(String title) {
-        return bookDao.getBookByTitle(title);
+        return generateBookList(bookDao.getBookByTitle(title));
     }
 
     @Override
@@ -73,22 +80,27 @@ public class LibraryServiceImpl implements LibraryService {
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<Book> getBooksByAuthorName(String name) {
-        return bookDao.getBooksByAuthorName(name);
+        List<Book> books = generateBookList(bookDao.getAllBook())
+                .stream().filter(b -> b.getAuthor().getName().equals(name))
+                .collect(Collectors.toList());
+        return books;
     }
 
     @Override
     @Transactional
     public void addNewCommentToBookById(long id, String commentText) {
-        bookDao.addNewCommentToBookById(id, commentText);
+        Optional<Book> book = bookDao.getBookById(id);
+        book.ifPresent(b -> b.getComment().add(new Comment(commentText)));
     }
 
-    @Override
-    @Transactional
-    public void updateBookById(long id, String title, String authorName, String genreName) {
-        Book book = bookDao.getBookById(id).get();
-        book.setTitle(title);
-        book.setAuthor(new Author(authorName));
-        book.setGenre(new Genre(genreName));
-        bookDao.insertOrUpdateBook(book);
+    private List<Book> generateBookList(List<Book> resultList) {
+        List<Book> books = new ArrayList<>();
+        resultList.forEach(b -> books.add(Book.newBuilder()
+                .setId(b.getId())
+                .setTitle(b.getTitle())
+                .setAuthor(b.getAuthor())
+                .setGenre(b.getGenre())
+                .build()));
+        return books;
     }
 }

@@ -48,7 +48,7 @@ class CommentDaoJpaTest {
     public void shouldGetAllComment() {
         Book book = em.find(Book.class, ACTUAL_BOOK_ID);
         assertThat(book).isNotNull();
-        List<Comment> comments = commentDao.getCommentsByBookId(ACTUAL_BOOK_ID);
+        List<Comment> comments = commentDao.findAll();
         assertThat(comments).isNotNull().hasSize(COMMENT_LIST_SIZE)
                 .anyMatch(c -> c.getComment().equals(ACTUAL_COMMENT_1))
                 .anyMatch(c -> c.getComment().equals(ACTUAL_COMMENT_2));

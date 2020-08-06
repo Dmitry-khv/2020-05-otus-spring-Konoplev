@@ -23,11 +23,16 @@ public class ApplicationShellCommands {
     //add newBook Толстой Проза
     @ShellMethod(value = "add new book", key = {"add", "insert"})
     public String addBook(String title, String authorName, String genreName) {
-        Book book = new Book(title, new Author(authorName), new Genre(genreName));
+        Book book = Book.newBuilder()
+                .setTitle(title)
+                .setAuthor(new Author(authorName))
+                .setGenre(new Genre(genreName))
+                .build();
         long id = serviceBook.saveBook(book);
         return String.format("Added new book id: %d", id);
     }
 
+    //id 1
     @ShellMethod(value = "get book by id", key = "id")
     public String getBookById(long id) {
         Book book = serviceBook.getBookById(id);
@@ -42,6 +47,15 @@ public class ApplicationShellCommands {
                 .collect(Collectors.joining("\n")));
     }
 
+    // author-books Толкиен
+    @ShellMethod(value = "get books by author name" , key = "author-books")
+    public String getBookByAuthorName(String authorName) {
+        List<Book> books = serviceBook.getBooksByAuthorName(authorName);
+        return String.format("Books with author: %s\n%s", authorName, books.stream()
+                .map(Book::toString)
+                .collect(Collectors.joining("\n")));
+    }
+
     @ShellMethod(value = "get list of books", key = "list")
     public String getAllBooks() {
         return String.format("Books:\n%s", serviceBook.getListBooks().stream()
@@ -49,7 +63,7 @@ public class ApplicationShellCommands {
                 .collect(Collectors.joining("\n")));
     }
 
-    //upd 1 "Властелин колец" Маяковский Стихи
+    //upd 1 "Властелин"
     @ShellMethod(value = "update book", key = {"upd", "update"})
     public String updateBookTitleById(long id, String title) {
         serviceBook.updateBookTitle(id, title);
@@ -62,6 +76,7 @@ public class ApplicationShellCommands {
         return String.format("book was deleted id:%d", id);
     }
 
+    //comment-id 1
     @ShellMethod(value = "get comments by book id", key = {"cid", "comment-id"})
     public String getCommentsForBook(long id) {
         List<Comment> comments = serviceComment.getAllCommentsByBookId(id);
@@ -73,6 +88,7 @@ public class ApplicationShellCommands {
         }
     }
 
+    //add-comment 1 замечательно
     @ShellMethod(value = "add comment to book", key = {"ac", "add-comment"})
     public String addCommentToBook(long id, String commentText) {
         serviceBook.addNewCommentToBookById(id, commentText);

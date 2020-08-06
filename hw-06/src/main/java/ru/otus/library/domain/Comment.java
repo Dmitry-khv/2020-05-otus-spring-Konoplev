@@ -13,12 +13,14 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@NamedEntityGraph(name = "comment-with-book", attributeNodes = {
+        @NamedAttributeNode("book")})
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne(targetEntity = Book.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = Book.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "book_id")
     private Book book;
 

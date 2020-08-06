@@ -32,8 +32,6 @@ class BookDaoJpaTest {
     private static final long ACTUAL_BOOK_AUTHOR_ID = 2L;
     private static final String ACTUAL_BOOK_GENRE = "Фэнтэзи";
     private static final long ACTUAL_BOOK_GENRE_ID = 2L;
-    private static final String ACTUAL_BOOK_COMMENT = "Не плохо";
-    private static final long ACTUAL_BOOK_COMMENT_ID = 1L;
 
 
 
@@ -102,16 +100,5 @@ class BookDaoJpaTest {
         assertThat(comment1).isNull();
         Comment comment2 = em.find(Comment.class, 2L);
         assertThat(comment2).isNull();
-    }
-
-    @Test
-    @DisplayName("должен доставать книги по имени автора")
-    public void shouldGetBooksByAuthorName() {
-        List<Book> books = bookDaoJpa.getBooksByAuthorName(ACTUAL_BOOK_AUTHOR);
-        assertThat(books).isNotNull().hasSize(2)
-                .allMatch(b -> !b.getTitle().equals(""))
-                .anyMatch(b -> b.getTitle().equals(ACTUAL_BOOK_TITLE))
-                .anyMatch(b -> b.getAuthor().getName().equals(ACTUAL_BOOK_AUTHOR))
-                .anyMatch(b -> b.getGenre().getGenre().equals(ACTUAL_BOOK_GENRE));
     }
 }

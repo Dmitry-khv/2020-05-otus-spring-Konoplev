@@ -11,6 +11,7 @@ import ru.otus.library.repository.jpa.CommentDaoJpa;
 import ru.otus.library.service.DBServiceComment;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 @RequiredArgsConstructor
@@ -31,7 +32,8 @@ public class DBServiceCommentImpl implements DBServiceComment {
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<Comment> getAllCommentsByBookId(long id) {
-        return commentDao.getCommentsByBookId(id);
+        List<Comment> comments = commentDao.findAll();
+        return comments.stream().filter(c -> c.getBook().getId() == id).collect(Collectors.toList());
     }
 
     @Override

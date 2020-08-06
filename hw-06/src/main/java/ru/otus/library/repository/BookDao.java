@@ -11,6 +11,4 @@ public interface BookDao {
     Optional<Book> getBookById(long id);
     List<Book> getBookByTitle(String name);
     List<Book> getAllBook();
-    List<Book> getBooksByAuthorName(String name);
-    void addNewCommentToBookById(long id, String commentText);
 }

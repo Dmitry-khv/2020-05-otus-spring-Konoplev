@@ -3,16 +3,11 @@ package ru.otus.library.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "Books")
@@ -20,8 +15,9 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @NamedEntityGraph(name = "book-with-author-and-genre", attributeNodes = {
-        @NamedAttributeNode("author"), @NamedAttributeNode("genre")
-})
+        @NamedAttributeNode("author"), @NamedAttributeNode("genre")})
+@NamedEntityGraph(name = "book-with-comment", attributeNodes = {
+        @NamedAttributeNode("comment")})
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,21 +34,47 @@ public class Book {
     @JoinColumn(name = "genre_id")
     private Genre genre;
 
-//    @Fetch(FetchMode.SUBSELECT)
+    @Fetch(FetchMode.SUBSELECT)
     @OneToMany(targetEntity = Comment.class, cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "book_id")
     private List<Comment> comment = new ArrayList<>();
 
-    public Book(String title, Author author, Genre genre) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
+    public static Builder newBuilder() {
+        return new Book().new Builder();
     }
 
-    public Book(long id, String title, Author author, Genre genre) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
+    public class Builder {
+        private Builder() {
+
+        }
+
+        public Builder setId(long id) {
+            Book.this.id = id;
+            return this;
+        }
+
+        public Builder setTitle(String title) {
+            Book.this.title = title;
+            return this;
+        }
+
+        public Builder setAuthor(Author author) {
+            Book.this.author = author;
+            return this;
+        }
+
+        public Builder setGenre(Genre genre) {
+            Book.this.genre = genre;
+            return this;
+        }
+
+        public Builder setComment(List<Comment> comment) {
+            Book.this.comment = comment;
+            return this;
+        }
+
+        public Book build() {
+            return Book.this;
+        }
     }
 }

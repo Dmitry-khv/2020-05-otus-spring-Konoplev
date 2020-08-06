@@ -4,11 +4,7 @@ import org.springframework.stereotype.Repository;
 import ru.otus.library.domain.Comment;
 import ru.otus.library.repository.CommentDao;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-import java.util.ArrayList;
+import javax.persistence.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,14 +23,12 @@ public class CommentDaoJpa implements CommentDao {
     }
 
     @Override
-    public List<Comment> getCommentsByBookId(long id) {
-        String getAllQuery = "select c from Comment c where c.book.id= :id";
+    public List<Comment> findAll() {
+        EntityGraph<?> entityGraph = em.getEntityGraph("comment-with-book");
+        String getAllQuery = "select c from Comment c";
         TypedQuery<Comment> query = em.createQuery(getAllQuery, Comment.class);
-        query.setParameter("id", id);
-        List<Comment> comments = new ArrayList<>();
-        query.getResultList().forEach(comment ->
-                comments.add(new Comment(comment.getId(), comment.getBook(), comment.getComment())));
-        return comments;
+        query.setHint("javax.persistence.fetchgraph", entityGraph);
+        return query.getResultList();
     }
 
     @Override

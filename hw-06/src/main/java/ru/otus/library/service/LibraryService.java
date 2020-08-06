@@ -13,5 +13,4 @@ public interface LibraryService {
     List<Book> getListBooks();
     List<Book> getBooksByAuthorName(String name);
     void addNewCommentToBookById(long id, String commentText);
-    void updateBookById(long id, String title, String authorName, String genreName);
 }
