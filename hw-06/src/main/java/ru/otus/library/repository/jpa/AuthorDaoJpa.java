@@ -10,7 +10,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -23,7 +22,9 @@ public class AuthorDaoJpa implements AuthorDao {
     @Override
     public void removeAuthor(long id) {
         Author author = em.find(Author.class, id);
-        em.remove(author);
+        if(author != null) {
+            em.remove(author);
+        }
     }
 
     @Override
@@ -33,15 +34,15 @@ public class AuthorDaoJpa implements AuthorDao {
 
     @Override
     public Optional<Author> getAuthorByName(String name) {
-        Author author = null;
         try {
             String findByName = "select a from Author a where a.name = :name";
             Query query = em.createQuery(findByName);
             query.setParameter("name", name);
-            author = (Author) query.getSingleResult();
+            Author author = (Author) query.getSingleResult();
+            return Optional.of(author);
         } catch (NoResultException e) {
             LOG.info("author not found name, add {}", name);
+            return Optional.empty();
         }
-        return Optional.ofNullable(author);
     }
 }

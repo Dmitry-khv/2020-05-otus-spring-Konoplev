@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DBServiceComment {
     void addOrUpdateComment(Comment comment);
-    List<Comment> getAllCommentsByBookId(long id);
+    List<Comment> getCommentsByBookId(long id);
     Comment getCommentById(long id);
     void deleteCommentById(long id);
 }

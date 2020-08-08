@@ -29,10 +29,10 @@ public class BookDaoJpa implements BookDao {
 
     @Override
     public void deleteBookById(long id) {
-        String delete = "delete from Book b where b.id= :id";
-        Query query = em.createQuery(delete);
-        query.setParameter("id", id);
-        query.executeUpdate();
+        Book book = em.find(Book.class, id);
+        if(book != null) {
+            em.remove(book);
+        }
     }
 
     @Override
@@ -50,14 +50,16 @@ public class BookDaoJpa implements BookDao {
 
     @Override
     public List<Book> getBookByTitle(String title) {
-        String getByTitleQuery = "select b from Book b join fetch b.author join fetch b.genre where b.title= :title";
+        EntityGraph<?> entityGraph = em.getEntityGraph("book-with-author-and-genre");
+        String getByTitleQuery = "select b from Book b where b.title= :title";
         TypedQuery<Book> query = em.createQuery(getByTitleQuery, Book.class);
         query.setParameter("title", title);
+        query.setHint("javax.persistence.fetchgraph", entityGraph);
         return query.getResultList();
     }
 
     @Override
-    public List<Book> getAllBook() {
+    public List<Book> getAllBooks() {
         EntityGraph<?> entityGraph = em.getEntityGraph("book-with-author-and-genre");
         String getAllQuery = "select b from Book b";
         TypedQuery<Book> query = em.createQuery(getAllQuery, Book.class);

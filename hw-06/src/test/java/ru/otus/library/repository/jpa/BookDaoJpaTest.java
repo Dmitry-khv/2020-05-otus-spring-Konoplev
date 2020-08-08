@@ -32,7 +32,9 @@ class BookDaoJpaTest {
     private static final long ACTUAL_BOOK_AUTHOR_ID = 2L;
     private static final String ACTUAL_BOOK_GENRE = "Фэнтэзи";
     private static final long ACTUAL_BOOK_GENRE_ID = 2L;
-
+    private static final String ACTUAL_COMMENT_1 = "не плохо";
+    private static final String ACTUAL_COMMENT_2 = "бывало и лучше";
+    private static final int COMMENT_LIST_SIZE = 2;
 
 
     @Autowired
@@ -82,7 +84,7 @@ class BookDaoJpaTest {
     @Test
     @DisplayName("должен получать список книг")
     public void shouldGetListOfBooks() {
-        List<Book> books = bookDaoJpa.getAllBook();
+        List<Book> books = bookDaoJpa.getAllBooks();
         assertThat(books).isNotNull().hasSize(2)
                 .allMatch(b -> !b.getTitle().equals(""))
                 .anyMatch(b -> b.getTitle().equals(ACTUAL_BOOK_TITLE))
@@ -100,5 +102,16 @@ class BookDaoJpaTest {
         assertThat(comment1).isNull();
         Comment comment2 = em.find(Comment.class, 2L);
         assertThat(comment2).isNull();
+    }
+
+    @Test
+    @DisplayName("должен доставать список комментариев к книге по ее id")
+    public void shouldGetAllComment() {
+        Book book = em.find(Book.class, ACTUAL_BOOK_ID);
+        assertThat(book).isNotNull();
+        List<Comment> comments = bookDaoJpa.getBookById(ACTUAL_BOOK_ID).get().getComment();
+        assertThat(comments).isNotNull().hasSize(COMMENT_LIST_SIZE)
+                .anyMatch(c -> c.getComment().equals(ACTUAL_COMMENT_1))
+                .anyMatch(c -> c.getComment().equals(ACTUAL_COMMENT_2));
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import ru.otus.library.domain.Comment;
+import ru.otus.library.repository.jpa.BookDaoJpa;
 import ru.otus.library.repository.jpa.CommentDaoJpa;
 import ru.otus.library.service.DBServiceComment;
 
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 public class DBServiceCommentImpl implements DBServiceComment {
     private static final Logger LOG = LoggerFactory.getLogger(DBServiceCommentImpl.class);
     private final CommentDaoJpa commentDao;
+    private final BookDaoJpa bookDao;
 
     @Override
     @Transactional
@@ -31,9 +33,8 @@ public class DBServiceCommentImpl implements DBServiceComment {
 
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-    public List<Comment> getAllCommentsByBookId(long id) {
-        List<Comment> comments = commentDao.findAll();
-        return comments.stream().filter(c -> c.getBook().getId() == id).collect(Collectors.toList());
+    public List<Comment> getCommentsByBookId(long id) {
+        return bookDao.getBookById(id).get().getComment();
     }
 
     @Override

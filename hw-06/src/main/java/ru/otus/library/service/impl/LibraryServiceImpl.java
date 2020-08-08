@@ -6,8 +6,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
+import ru.otus.library.domain.Genre;
 import ru.otus.library.repository.jpa.AuthorDaoJpa;
 import ru.otus.library.repository.jpa.BookDaoJpa;
 import ru.otus.library.repository.jpa.GenreDaoJpa;
@@ -53,14 +55,14 @@ public class LibraryServiceImpl implements LibraryService {
     }
 
     @Override
-    @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+    @Transactional(readOnly = true)
     public Book getBookById(long id) {
         Book transactionalBook = bookDao.getBookById(id).orElse(new Book());
-        Book book = Book.newBuilder()
-                .setId(id)
-                .setTitle(transactionalBook.getTitle())
-                .setAuthor(transactionalBook.getAuthor())
-                .setGenre(transactionalBook.getGenre())
+        Book book = Book.builder().id(id)
+                .title(transactionalBook.getTitle())
+                .author(new Author(transactionalBook.getAuthor().getId(), transactionalBook.getAuthor().getName()))
+                .genre(new Genre(transactionalBook.getGenre().getId(), transactionalBook.getGenre().getGenre()))
+                .comment(new ArrayList<>(transactionalBook.getComment()))
                 .build();
         return book;
     }
@@ -74,13 +76,13 @@ public class LibraryServiceImpl implements LibraryService {
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<Book> getListBooks()  {
-        return bookDao.getAllBook();
+        return bookDao.getAllBooks();
     }
 
     @Override
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<Book> getBooksByAuthorName(String name) {
-        List<Book> books = generateBookList(bookDao.getAllBook())
+        List<Book> books = generateBookList(bookDao.getAllBooks())
                 .stream().filter(b -> b.getAuthor().getName().equals(name))
                 .collect(Collectors.toList());
         return books;
@@ -95,11 +97,11 @@ public class LibraryServiceImpl implements LibraryService {
 
     private List<Book> generateBookList(List<Book> resultList) {
         List<Book> books = new ArrayList<>();
-        resultList.forEach(b -> books.add(Book.newBuilder()
-                .setId(b.getId())
-                .setTitle(b.getTitle())
-                .setAuthor(b.getAuthor())
-                .setGenre(b.getGenre())
+        resultList.forEach(b -> books.add(Book.builder()
+                .id(b.getId())
+                .title(b.getTitle())
+                .author(b.getAuthor())
+                .genre(b.getGenre())
                 .build()));
         return books;
     }

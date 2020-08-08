@@ -5,7 +5,6 @@ import ru.otus.library.domain.Comment;
 import ru.otus.library.repository.CommentDao;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -23,20 +22,11 @@ public class CommentDaoJpa implements CommentDao {
     }
 
     @Override
-    public List<Comment> findAll() {
-        EntityGraph<?> entityGraph = em.getEntityGraph("comment-with-book");
-        String getAllQuery = "select c from Comment c";
-        TypedQuery<Comment> query = em.createQuery(getAllQuery, Comment.class);
-        query.setHint("javax.persistence.fetchgraph", entityGraph);
-        return query.getResultList();
-    }
-
-    @Override
     public void deleteById(long id) {
-        String deleteQuery = "delete from Comment c where c.id = :id";
-        Query query = em.createQuery(deleteQuery);
-        query.setParameter("id", id);
-        query.executeUpdate();
+        Comment comment = em.find(Comment.class, id);
+        if (comment != null) {
+            em.remove(comment);
+        }
     }
 
     @Override

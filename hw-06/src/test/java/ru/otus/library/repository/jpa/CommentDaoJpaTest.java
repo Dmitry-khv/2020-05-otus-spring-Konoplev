@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Import;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
 
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -43,16 +42,6 @@ class CommentDaoJpaTest {
                 .containsExactly(EXPECTED_COMMENT_ID, NEW_COMMENT);
     }
 
-    @Test
-    @DisplayName("должен доставать список комментариев к книге по ее id")
-    public void shouldGetAllComment() {
-        Book book = em.find(Book.class, ACTUAL_BOOK_ID);
-        assertThat(book).isNotNull();
-        List<Comment> comments = commentDao.findAll();
-        assertThat(comments).isNotNull().hasSize(COMMENT_LIST_SIZE)
-                .anyMatch(c -> c.getComment().equals(ACTUAL_COMMENT_1))
-                .anyMatch(c -> c.getComment().equals(ACTUAL_COMMENT_2));
-    }
 
     @Test
     @DisplayName("должен редактировать комментарий по его id")
