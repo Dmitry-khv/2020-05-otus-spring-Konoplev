@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public interface BookRepository extends JpaRepository<Book, Long>, BookRepositoryCustom {
+public interface BookRepository extends JpaRepository<Book, Long> {
     @EntityGraph(attributePaths = {"author", "genre", "comment"})
     Optional<Book>findById(long id);
 

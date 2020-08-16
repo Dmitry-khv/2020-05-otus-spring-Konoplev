@@ -9,7 +9,6 @@ import ru.otus.library.domain.Comment;
 import ru.otus.library.domain.Genre;
 import ru.otus.library.service.impl.DBAuthorServiceImpl;
 import ru.otus.library.service.impl.DBBookServiceImpl;
-import ru.otus.library.service.impl.DBCommentServiceImpl;
 import ru.otus.library.service.impl.DBGenreServiceImpl;
 
 import java.util.List;
