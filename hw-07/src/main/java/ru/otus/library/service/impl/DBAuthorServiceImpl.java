@@ -2,7 +2,6 @@ package ru.otus.library.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import ru.otus.library.domain.Author;
 import ru.otus.library.repository.AuthorRepository;
 import ru.otus.library.service.DBAuthorService;
@@ -16,7 +15,6 @@ public class DBAuthorServiceImpl implements DBAuthorService {
     private final AuthorRepository repository;
 
     @Override
-    @Transactional
     public Author addAuthor(Author author) {
         Author savedAuthor = repository.findByName(author.getName()).orElse(null);
         return Objects.requireNonNullElseGet(savedAuthor, () -> repository.save(author));

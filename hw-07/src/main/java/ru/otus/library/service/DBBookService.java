@@ -12,6 +12,7 @@ public interface DBBookService {
     List<Book> getBooksByTitle(String title);
     List<Book> getBooks();
     List<Book> getBooksByAuthorName(String name);
-    void addNewCommentByBookId(long id, Comment comment);
+    void addNewCommentToBook(long id, Comment comment);
+    List<Comment> getCommentsByBookId(long id);
     void updateBookTitle(long id, String title);
 }

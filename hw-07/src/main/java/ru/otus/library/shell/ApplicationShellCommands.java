@@ -7,8 +7,6 @@ import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
 import ru.otus.library.domain.Genre;
-import ru.otus.library.dto.BookDTO;
-import ru.otus.library.service.NotFoundException;
 import ru.otus.library.service.impl.DBAuthorServiceImpl;
 import ru.otus.library.service.impl.DBBookServiceImpl;
 import ru.otus.library.service.impl.DBCommentServiceImpl;
@@ -21,7 +19,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ApplicationShellCommands {
     private final DBBookServiceImpl bookService;
-    private final DBCommentServiceImpl commentService;
     private final DBAuthorServiceImpl authorService;
     private final DBGenreServiceImpl genreService;
 
@@ -74,21 +71,21 @@ public class ApplicationShellCommands {
 
     //upd 1 "Властелин"
     @ShellMethod(value = "update book", key = {"upd", "update"})
-    public String updateBookTitleById(long id, String title) {
+    public String updateBookTitle(long id, String title) {
         bookService.updateBookTitle(id, title);
         return String.format("Book updated id:%d", id);
     }
 
     @ShellMethod(value = "remove book by id", key = {"rm", "remove"})
-    public String removeBookById(long id) {
+    public String removeBook(long id) {
         bookService.deleteBookById(id);
         return String.format("book was deleted id:%d", id);
     }
 
     //comment-id 1
     @ShellMethod(value = "get comments by book id", key = {"cid", "comment-id"})
-    public String getCommentsForBook(long id) {
-        List<Comment> comments = commentService.getCommentsByBookId(id);
+    public String getBookComments(long id) {
+        List<Comment> comments = bookService.getCommentsByBookId(id);
         if(!comments.isEmpty()) {
             return String.format("Comments for book id: %d:\n%s", id,
                     comments.stream().map(Comment::getComment).collect(Collectors.joining("\n")));
@@ -101,8 +98,7 @@ public class ApplicationShellCommands {
     @ShellMethod(value = "add comment to book", key = {"ac", "add-comment"})
     public String addCommentToBook(long id, String commentText) {
         Comment comment = new Comment(commentText);
-        Book book = bookService.getBookById(id);
-        bookService.addNewCommentByBookId(id, comment);
+        bookService.addNewCommentToBook(id, comment);
         return String.format("Added comment: %s to book id: %d", commentText, id);
     }
 }
