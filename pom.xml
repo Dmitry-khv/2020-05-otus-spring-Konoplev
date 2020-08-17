@@ -17,6 +17,7 @@
         <module>hw-04</module>
         <module>hw-05</module>
         <module>hw-06</module>
+        <module>hw-07</module>
     </modules>
 
     <parent>
