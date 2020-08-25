@@ -47,11 +47,11 @@ public class ApplicationShellCommands {
                 .collect(Collectors.joining("\n")));
     }
 
-    // author-books Tolkien
+    // author-books 1a
     @ShellMethod(value = "get books by author name" , key = "author-books")
-    public String getBookByAuthorName(String authorName) {
-        List<Book> books = bookService.getBooksByAuthorName(new Author(authorName));
-        return String.format("Books with author: %s\n%s", authorName, books.stream()
+    public String getBookByAuthorName(String authorid) {
+        List<Book> books = bookService.getBooksByAuthorId(authorid);
+        return String.format("Books with author: %s\n%s", authorid, books.stream()
                 .map(Book::toString)
                 .collect(Collectors.joining("\n")));
     }
@@ -67,7 +67,7 @@ public class ApplicationShellCommands {
     @ShellMethod(value = "update book", key = {"upd", "update"})
     public String updateBookTitle(String id, String title) {
         bookService.updateBookTitle(id, title);
-        return String.format("Book updated id:%s", id);
+        return String.format("Book title updated id:%s title:%s" , id, title);
     }
 
     @ShellMethod(value = "remove book by id", key = {"rm", "remove"})
