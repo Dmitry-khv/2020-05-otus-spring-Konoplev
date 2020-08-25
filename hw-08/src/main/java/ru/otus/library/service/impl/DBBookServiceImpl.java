@@ -1,6 +1,5 @@
 package ru.otus.library.service.impl;
 
-import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
 import ru.otus.library.repository.BookRepository;
@@ -42,9 +41,8 @@ public class DBBookServiceImpl implements DBBookService {
     }
 
     @Override
-    public List<Book> getBooksByAuthorName(Author author) {
-//        return null;
-        return bookRepository.findBooksByAuthors(author);
+    public List<Book> getBooksByAuthorId(String id) {
+        return bookRepository.findAllByAuthorId(id);
     }
 
     @Override

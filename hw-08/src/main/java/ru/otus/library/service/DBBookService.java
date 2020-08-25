@@ -1,7 +1,5 @@
 package ru.otus.library.service;
 
-
-import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
 
@@ -13,7 +11,7 @@ public interface DBBookService {
     Book getBookById(String id);
     List<Book> getBooksByTitle(String title);
     List<Book> getBooks();
-    List<Book> getBooksByAuthorName(Author author);
+    List<Book> getBooksByAuthorId(String id);
     void addNewCommentToBook(String id, Comment comment);
     List<Comment> getCommentsByBookId(String id);
     void updateBookTitle(String id, String title);
