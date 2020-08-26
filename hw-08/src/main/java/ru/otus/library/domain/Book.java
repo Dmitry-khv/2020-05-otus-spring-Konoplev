@@ -25,6 +25,7 @@ public class Book {
     @DBRef
     @Field("authors")
     private Set<Author> authors = new HashSet<>();
+    @DBRef
     @Field("genres")
     private Set<Genre> genres = new HashSet<>();
     @Field("comments")
@@ -34,8 +35,8 @@ public class Book {
         authors.addAll(Set.of(author));
     }
 
-    public void addGenre(Genre genre) {
-        genres.add(genre);
+    public void addGenre(Genre...genre) {
+        genres.addAll(Set.of(genre));
     }
 
     public void addComment(Comment comment) {

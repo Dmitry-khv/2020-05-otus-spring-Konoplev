@@ -102,7 +102,7 @@ class BookRepositoryTest {
     @Test
     @DisplayName("должен доставать книги по жанру")
     public void shouldGetBooksByGenre() {
-        List<Book> books = bookRepository.findAllByGenreName(SAVED_BOOK_GENRE);
+        List<Book> books = bookRepository.findAllByGenreId(SAVED_BOOK_GENRE_ID);
         assertThat(books).hasSize(2).contains(savedBook);
     }
 
@@ -122,13 +122,12 @@ class BookRepositoryTest {
 
     @Test
     @DisplayName("должен удалять автора из книги при удалении автора")
-    public void shouldDeleteBookIfHasNotAuthors() {
+    public void shouldCascadeDeleteAuthor() {
         Book bookWith1Author = new Book();
         bookWith1Author.setTitle(ACTUAL_BOOK_TITLE);
         Author author = new Author(ACTUAL_BOOK_AUTHOR);
         bookWith1Author.addAuthor(author);
         bookWith1Author = bookRepository.save(bookWith1Author);
-        assertThat(bookWith1Author.getId()).isNotEqualTo(null);
         authorRepository.delete(author);
         assertThat(bookRepository.findById(bookWith1Author.getId()).get()).isNotNull()
                 .matches(b -> b.getAuthors().isEmpty());
@@ -140,11 +139,35 @@ class BookRepositoryTest {
         Author author2 = new Author(SAVED_BOOK_AUTHOR);
         bookWith2Authors.addAuthor(author1, author2);
         bookWith2Authors = bookRepository.save(bookWith2Authors);
-        assertThat(bookWith2Authors.getId()).isNotEqualTo(null);
         authorRepository.delete(author1);
         assertThat(bookRepository.findById(bookWith2Authors.getId())).isNotEmpty()
                 .map(Book::getAuthors).contains(Set.of(author2));
         bookRepository.delete(bookWith2Authors);
     }
 
+    @Test
+    @DisplayName("должен удалять жанр из книги при удалении жанра")
+    public void shouldCascadeDeleteGenre() {
+        Book bookWith1Genre = new Book();
+        bookWith1Genre.setTitle(ACTUAL_BOOK_TITLE);
+        Genre genre = new Genre(ACTUAL_BOOK_GENRE);
+        bookWith1Genre.addGenre(genre);
+        bookWith1Genre = bookRepository.save(bookWith1Genre);
+        genreRepository.delete(genre);
+        assertThat(bookRepository.findById(bookWith1Genre.getId()).get()).isNotNull()
+                .matches(b -> b.getGenres().isEmpty());
+        bookRepository.delete(bookWith1Genre);
+
+        Book bookWith2Genres = new Book();
+        bookWith2Genres.setTitle(ACTUAL_BOOK_TITLE);
+        Genre genre1 = new Genre(ACTUAL_BOOK_GENRE);
+        Genre genre2 = new Genre(SAVED_BOOK_GENRE);
+        bookWith2Genres.addGenre(genre1, genre2);
+        bookWith2Genres = bookRepository.save(bookWith2Genres);
+        assertThat(bookWith2Genres.getId()).isNotEqualTo(null);
+        genreRepository.delete(genre1);
+        assertThat(bookRepository.findById(bookWith2Genres.getId())).isNotEmpty()
+                .map(Book::getGenres).contains(Set.of(genre2));
+        bookRepository.delete(bookWith2Genres);
+    }
 }

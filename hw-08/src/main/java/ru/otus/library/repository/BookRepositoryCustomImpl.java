@@ -19,8 +19,8 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 
 
     @Override
-    public List<Book> findAllByGenreName(String name) {
-        return mongoTemplate.find(new Query(Criteria.where("genres.name").is(name)), Book.class);
+    public List<Book> findAllByGenreId(String id) {
+        return mongoTemplate.find(new Query(Criteria.where("genres.id").is(id)), Book.class);
     }
 
     @Override
@@ -32,6 +32,13 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
     public void removeAuthorById(String id) {
         Query query = Query.query(Criteria.where("$id").is(new ObjectId(id)));
         Update update = new Update().pull("authors", query);
+        mongoTemplate.updateMulti(new Query(), update, Book.class);
+    }
+
+    @Override
+    public void removeGenreById(String id) {
+        Query query = Query.query(Criteria.where("$id").is(new ObjectId(id)));
+        Update update = new Update().pull("genres", query);
         mongoTemplate.updateMulti(new Query(), update, Book.class);
     }
 }
