@@ -48,10 +48,10 @@ public class ApplicationShellCommands {
     }
 
     // author-books 1a
-    @ShellMethod(value = "get books by author name" , key = "author-books")
-    public String getBookByAuthorName(String authorid) {
-        List<Book> books = bookService.getBooksByAuthorId(authorid);
-        return String.format("Books with author: %s\n%s", authorid, books.stream()
+    @ShellMethod(value = "get books by author id" , key = "author-books")
+    public String getBookByAuthorName(String authorId) {
+        List<Book> books = bookService.getBooksByAuthorId(authorId);
+        return String.format("Books with author: %s\n%s", authorId, books.stream()
                 .map(Book::toString)
                 .collect(Collectors.joining("\n")));
     }
