@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      port: 8080
+      database: library
+
+  mongock:
+    runner-type: initializingbean
+    change-logs-scan-package:
+      - ru.otus.library.changelogs
+
+logging:
+  level:
+    root: info
