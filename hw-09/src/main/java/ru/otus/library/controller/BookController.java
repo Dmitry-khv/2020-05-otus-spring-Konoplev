@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
-import ru.otus.library.dto.AuthorDto;
-import ru.otus.library.dto.BookDto;
+import ru.otus.library.rest.dto.AuthorDto;
+import ru.otus.library.rest.dto.BookDto;
 import ru.otus.library.service.impl.DBAuthorServiceImpl;
 import ru.otus.library.service.impl.DBBookServiceImpl;
 

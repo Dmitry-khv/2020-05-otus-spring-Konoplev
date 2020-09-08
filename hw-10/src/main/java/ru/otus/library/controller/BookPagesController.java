@@ -6,12 +6,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
-import ru.otus.library.dto.AuthorDto;
-import ru.otus.library.dto.BookDto;
+import ru.otus.library.rest.dto.AuthorDto;
+import ru.otus.library.rest.dto.BookDto;
 import ru.otus.library.service.impl.DBAuthorServiceImpl;
 import ru.otus.library.service.impl.DBBookServiceImpl;
 
@@ -19,9 +18,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@RestController
+@Controller
 @RequiredArgsConstructor
-public class BookController {
+public class BookPagesController {
 
     private final DBBookServiceImpl bookService;
     private final DBAuthorServiceImpl authorService;
@@ -65,19 +64,19 @@ public class BookController {
         return new RedirectView("/", true);
     }
 
-    @GetMapping("book/list")
+    @GetMapping("/book")
     public String listPageView(Model model) {
-        List<BookDto> books =  bookService.getBooks().stream()
-                .map(BookDto::toDto)
-                .collect(Collectors.toList());
-        model.addAttribute("books", books);
+//        List<BookDto> books =  bookService.getBooks().stream()
+//                .map(BookDto::toDto)
+//                .collect(Collectors.toList());
+        model.addAttribute("keywords", "library books");
         return BOOK_LIST_PAGE;
     }
 
     @GetMapping("book/{id}")
     public String bookPageView(Model model, @PathVariable String id) {
-        BookDto book = BookDto.toDto(bookService.getBookById(id));
-        model.addAttribute("book", book);
+//        BookDto book = BookDto.toDto(bookService.getBookById(id));
+//        model.addAttribute("book", book);
         model.addAttribute("comment", new Comment());
         return BOOK_VIEW_PAGE;
     }
