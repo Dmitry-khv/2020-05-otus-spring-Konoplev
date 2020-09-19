@@ -12,6 +12,8 @@ $.getJSON('/api/books').done(books => {
     })
 })
 
+
+
 getAuthors = val => {
     let str = '';
     val.authors.forEach(author => {

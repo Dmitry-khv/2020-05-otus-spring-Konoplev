@@ -3,6 +3,8 @@ spring:
     mongodb:
       port: 8080
       database: library
+  mvc:
+    static-path-pattern: static/**
 
   mongock:
     runner-type: initializingbean

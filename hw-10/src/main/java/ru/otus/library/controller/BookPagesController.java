@@ -37,7 +37,7 @@ public class BookPagesController {
     }
 
     @PostMapping("/")
-    public RedirectView findBookById(Model model, Book book) {
+    public RedirectView findBookById(Book book) {
         return new RedirectView(String.format("/book/%s", book.getId()), true);
     }
 
@@ -64,20 +64,17 @@ public class BookPagesController {
         return new RedirectView("/", true);
     }
 
-    @GetMapping("/book")
-    public String listPageView(Model model) {
-//        List<BookDto> books =  bookService.getBooks().stream()
-//                .map(BookDto::toDto)
-//                .collect(Collectors.toList());
-        model.addAttribute("keywords", "library books");
+    @GetMapping("/list")
+    public String listPageView() {
         return BOOK_LIST_PAGE;
     }
 
-    @GetMapping("book/{id}")
-    public String bookPageView(Model model, @PathVariable String id) {
-//        BookDto book = BookDto.toDto(bookService.getBookById(id));
-//        model.addAttribute("book", book);
+    @GetMapping("/book/{id}")
+    public String bookPageView(Model model, @PathVariable("id") String id) {
+        BookDto book = BookDto.toDto(bookService.getBookById(id));
+        model.addAttribute("book", book);
         model.addAttribute("comment", new Comment());
+        model.addAttribute("book-id", id);
         return BOOK_VIEW_PAGE;
     }
 

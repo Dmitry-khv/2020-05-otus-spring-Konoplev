@@ -1,6 +1,9 @@
 package ru.otus.library.rest;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,16 +19,12 @@ import java.util.stream.Collectors;
 public class BookController {
 
     private final DBBookServiceImpl bookService;
-    private final DBAuthorServiceImpl authorService;
 
     @GetMapping("/api/books")
-    public List<BookDto> getAllBooks() {
-        return bookService.getBooks().stream()
+    public String getAllBooks() throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        List<BookDto> books = bookService.getBooks().stream()
                 .map(BookDto::toDto).collect(Collectors.toList());
-    }
-
-    @GetMapping("/api/book/{id}")
-    public BookDto getBook(@PathVariable String id) {
-        return BookDto.toDto(bookService.getBookById(id));
+        return mapper.writeValueAsString(books);
     }
 }
