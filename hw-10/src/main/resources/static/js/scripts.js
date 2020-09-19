@@ -12,7 +12,7 @@ $.getJSON('/api/books').done(books => {
     })
 })
 
-let getAuthors = val => {
+getAuthors = val => {
     let str = '';
     val.authors.forEach(author => {
         str += author.name + '<br>';
@@ -20,7 +20,7 @@ let getAuthors = val => {
     return str;
 }
 
-let getGenres = val => {
+getGenres = val => {
     let str = '';
     val.genres.forEach(genre => {
         str += genre.name + '<br>';
