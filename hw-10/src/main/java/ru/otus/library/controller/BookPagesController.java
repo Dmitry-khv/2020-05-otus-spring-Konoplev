@@ -64,7 +64,7 @@ public class BookPagesController {
         return new RedirectView("/", true);
     }
 
-    @GetMapping("/list")
+    @GetMapping("/book")
     public String listPageView() {
         return BOOK_LIST_PAGE;
     }
