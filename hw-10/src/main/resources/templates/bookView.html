@@ -44,39 +44,17 @@
 <!--    </div>-->
 <!--</form>-->
 
-<!--<br>-->
-<!--<div class="container">-->
-<!--    <p>Комментарии:</p>-->
-<!--    <ul id="book-comments" class="list-group"></ul>-->
-<!--    <ul class="list-group" th:each="comment : ${book.comments}">-->
-<!--        <li class="list-group" th:text="'&quot' + ${comment.text} + '&quot'"></li>-->
-<!--    </ul>-->
-<!--</div>-->
+<br>
+<div class="container">
+    <p>Комментарии:</p>
+    <ul id="book-comments" class="list-group"></ul>
+</div>
 
 <div class="text-center">
     <a th:href="@{/}" href="index.html">На главную</a>
 </div>
 
 <script src="/static/js/scripts.js">
-
-
-
-
-//    getAuthors = val => {
-//        let str = '';
-//        val.forEach(author => {
-//            str += author.name + '\n';
-//        })
-//        return str;
-//    }
-//
-//    getGenres = val => {
-//        let str = '';
-//        val.forEach(genre => {
-//            str += genre.name + '\n';
-//        })
-//        return str;
-//    }
 </script>
 </body>
 </html>

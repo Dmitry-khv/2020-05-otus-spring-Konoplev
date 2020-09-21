@@ -9,6 +9,7 @@ function getBookById() {
                 document.getElementById('book-title').append(book.title);
                 document.getElementById('book-author').append(getAuthors(book));
                 document.getElementById('book-genre').append(getGenres(book));
+                document.getElementById('book-comments').append(getComments(book));
             });
     }
 }
@@ -37,5 +38,15 @@ getGenres = val => {
         str += genre.name + '\n';
     })
     return str;
+}
+
+getComments = val => {
+    let fragment = new DocumentFragment();
+    val.comments.forEach(com => {
+        let li = document.createElement('li');
+        li.append(com.text);
+        fragment.append(li);
+    })
+    return fragment;
 }
 

@@ -71,10 +71,8 @@ public class BookPagesController {
 
     @GetMapping("/book/{id}")
     public String bookPageView(Model model, @PathVariable("id") String id) {
-//        BookDto book = BookDto.toDto(bookService.getBookById(id));
-//        model.addAttribute("book", book);
-//        model.addAttribute("comment", new Comment());
-//        model.addAttribute("book-id", id);
+        model.addAttribute("comment", new Comment());
+        model.addAttribute("book-id", id);
         return BOOK_VIEW_PAGE;
     }
 
