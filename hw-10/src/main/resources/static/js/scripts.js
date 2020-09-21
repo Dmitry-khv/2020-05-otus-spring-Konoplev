@@ -49,3 +49,7 @@ getComments = val => {
     })
     return fragment;
 }
+
+function addComment(text) {
+    console.log(text)
+}
