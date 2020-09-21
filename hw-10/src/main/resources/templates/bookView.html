@@ -6,55 +6,77 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Edit book</title>
 </head>
-<body>
+<body onload="getBookById()">
 <div class="container">
     <table class="table table-bordered">
         <tbody>
         <tr>
             <td> Название</td>
-            <td id="book-title" th:text="${book.title}"></td>
+            <td id="book-title"></td>
         </tr>
         <tr>
             <td> Автор</td>
             <td>
-                <ul id="book-author" class="list-group" th:each="author : ${book.authors}">
-                    <li class="list-group" th:text="${author.name}"></li>
+                <ul id="book-author" class="list-group">
+                    <li class="list-group"></li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td> Жанр</td>
             <td>
-                <ul id="book-genre" class="list-group" th:each="genre : ${book.genres}">
-                    <li class="list-group" th:text="${genre.name}"></li>
+                <ul id="book-genre" class="list-group">
+                    <li class="list-group"></li>
                 </ul>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
-<form id="save-form" th:action="@{/book/{id}/comment(id=*{book.id})}" th:method="post" action="bookView.html">
-    <div class="container">
-        <textarea class="form-control" aria-label="With textarea" th:field="${comment.text}"></textarea>
-    </div>
-    <div class="container">
-        <button class="btn btn-primary" data-toggle="button"
-                aria-pressed="false" type="submit">Добавить комментарий
-        </button>
-    </div>
-</form>
+<!--<form id="save-form" th:action="@{/book/{id}/comment(id=*{book.id})}" th:method="post" action="bookView.html">-->
+<!--    <div class="container">-->
+<!--        <textarea class="form-control" aria-label="With textarea" th:field="${comment.text}"></textarea>-->
+<!--    </div>-->
+<!--    <div class="container">-->
+<!--        <button class="btn btn-primary" data-toggle="button"-->
+<!--                aria-pressed="false" type="submit">Добавить комментарий-->
+<!--        </button>-->
+<!--    </div>-->
+<!--</form>-->
 
-<br>
-<div class="container">
-    <p>Комментарии:</p>
-    <ul id="book-comments" class="list-group"></ul>
-    <ul class="list-group" th:each="comment : ${book.comments}">
-        <li class="list-group" th:text="'&quot' + ${comment.text} + '&quot'"></li>
-    </ul>
-</div>
+<!--<br>-->
+<!--<div class="container">-->
+<!--    <p>Комментарии:</p>-->
+<!--    <ul id="book-comments" class="list-group"></ul>-->
+<!--    <ul class="list-group" th:each="comment : ${book.comments}">-->
+<!--        <li class="list-group" th:text="'&quot' + ${comment.text} + '&quot'"></li>-->
+<!--    </ul>-->
+<!--</div>-->
 
 <div class="text-center">
     <a th:href="@{/}" href="index.html">На главную</a>
 </div>
+
+<script src="/static/js/scripts.js">
+
+
+
+
+//    getAuthors = val => {
+//        let str = '';
+//        val.forEach(author => {
+//            str += author.name + '\n';
+//        })
+//        return str;
+//    }
+//
+//    getGenres = val => {
+//        let str = '';
+//        val.forEach(genre => {
+//            str += genre.name + '\n';
+//        })
+//        return str;
+//    }
+</script>
 </body>
 </html>
