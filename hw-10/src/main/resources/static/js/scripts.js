@@ -49,4 +49,3 @@ getComments = val => {
     })
     return fragment;
 }
-

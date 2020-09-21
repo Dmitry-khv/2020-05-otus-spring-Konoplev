@@ -33,16 +33,14 @@
         </tbody>
     </table>
 </div>
-<!--<form id="save-form" th:action="@{/book/{id}/comment(id=*{book.id})}" th:method="post" action="bookView.html">-->
-<!--    <div class="container">-->
-<!--        <textarea class="form-control" aria-label="With textarea" th:field="${comment.text}"></textarea>-->
-<!--    </div>-->
-<!--    <div class="container">-->
-<!--        <button class="btn btn-primary" data-toggle="button"-->
-<!--                aria-pressed="false" type="submit">Добавить комментарий-->
-<!--        </button>-->
-<!--    </div>-->
-<!--</form>-->
+    <div class="container">
+        <textarea id="comment-text" class="form-control" aria-label="With textarea"></textarea>
+    </div>
+    <div class="container">
+        <button id="addComment" class="btn btn-primary" data-toggle="button"
+                aria-pressed="false" type="submit">Добавить комментарий
+        </button>
+    </div>
 
 <br>
 <div class="container">
@@ -54,7 +52,7 @@
     <a th:href="@{/}" href="index.html">На главную</a>
 </div>
 
-<script src="/static/js/scripts.js">
-</script>
+<script src="/static/js/scripts.js"></script>
+
 </body>
 </html>
