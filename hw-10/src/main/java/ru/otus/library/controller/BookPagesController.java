@@ -76,14 +76,6 @@ public class BookPagesController {
         return BOOK_VIEW_PAGE;
     }
 
-    @PostMapping("/book/{id}/comment")
-    public RedirectView addComment(@PathVariable String id, Model model, Comment comment, Book book) {
-        bookService.addNewCommentToBook(book.getId(), comment);
-        BookDto saved = BookDto.toDto(book);
-        model.addAttribute("book", saved);
-        return new RedirectView(String.format("/book/%s", id), true);
-    }
-
     @GetMapping("book/{id}/delete")
     public RedirectView deleteBook(@PathVariable String id) {
         bookService.deleteBookById(id);
