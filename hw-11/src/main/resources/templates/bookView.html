@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Edit book</title>
+<!--    <script type="text/javascript" src="webjars/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="getBookById()">
+<div class="container">
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <td> Название</td>
+            <td id="book-title"></td>
+        </tr>
+        <tr>
+            <td> Автор</td>
+            <td>
+                <ul id="book-author" class="list-group">
+                    <li class="list-group"></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td> Жанр</td>
+            <td>
+                <ul id="book-genre" class="list-group">
+                    <li class="list-group"></li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+    <div class="container">
+        <textarea id="comment-text" class="form-control" aria-label="With textarea"></textarea>
+    </div>
+    <div class="container">
+        <button id="addComment" class="btn btn-primary" data-toggle="button"
+                aria-pressed="false" type="submit">Добавить комментарий</button>
+    </div>
+
+<br>
+<div class="container">
+    <p>Комментарии:</p>
+    <ul id="book-comments" class="list-group"></ul>
+</div>
+
+<div class="text-center">
+    <a th:href="@{/}" href="index.html">На главную</a>
+</div>
+<div class="text container">
+    <a th:href="@{/book/list}" href="list.html">К списку книг</a>
+</div>
+
+<script src="/static/js/scripts.js"></script>
+
+</body>
+</html>
