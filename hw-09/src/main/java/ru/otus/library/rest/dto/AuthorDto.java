@@ -1,10 +1,8 @@
-package ru.otus.library.dto;
+package ru.otus.library.rest.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Field;
 import ru.otus.library.domain.Author;
 
 @NoArgsConstructor

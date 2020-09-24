@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequiredArgsConstructor
-public class BookController {
+public class BookPagesController {
 
     private final DBBookServiceImpl bookService;
     private final DBAuthorServiceImpl authorService;
@@ -37,8 +37,8 @@ public class BookController {
     }
 
     @PostMapping("/")
-    public RedirectView findBookById(Model model, Book book) {
-        return new RedirectView(String.format("/book/%s", book.getId()), true);
+    public RedirectView findBookById(Book book) {
+        return new RedirectView(String.format("/book/%s/view", book.getId()), true);
     }
 
     @GetMapping("book/create")
@@ -56,37 +56,16 @@ public class BookController {
         return CREATE_PAGE;
     }
 
-    @PostMapping("book/create")
-    public RedirectView saveBook(BookDto book, Model model) {
-        Book saved = bookService.saveBook(BookDto.toDomain(book));
-        model.addAttribute("book", saved);
-        model.addAttribute("action", "Save");
-        return new RedirectView("/", true);
-    }
-
-    @GetMapping("book/list")
-    public String listPageView(Model model) {
-        List<BookDto> books =  bookService.getBooks().stream()
-                .map(BookDto::toDto)
-                .collect(Collectors.toList());
-        model.addAttribute("books", books);
+    @GetMapping("/book/list")
+    public String listPageView() {
         return BOOK_LIST_PAGE;
     }
 
-    @GetMapping("book/{id}")
-    public String bookPageView(Model model, @PathVariable String id) {
-        BookDto book = BookDto.toDto(bookService.getBookById(id));
-        model.addAttribute("book", book);
+    @GetMapping("/book/{id}/view")
+    public String bookPageView(Model model, @PathVariable("id") String id) {
         model.addAttribute("comment", new Comment());
+        model.addAttribute("book-id", id);
         return BOOK_VIEW_PAGE;
-    }
-
-    @PostMapping("/book/{id}/comment")
-    public RedirectView addComment(@PathVariable String id, Model model, Comment comment, Book book) {
-        bookService.addNewCommentToBook(book.getId(), comment);
-        BookDto saved = BookDto.toDto(book);
-        model.addAttribute("book", saved);
-        return new RedirectView(String.format("/book/%s", id), true);
     }
 
     @GetMapping("book/{id}/delete")
