@@ -38,7 +38,7 @@ public class BookPagesController {
 
     @PostMapping("/")
     public RedirectView findBookById(Book book) {
-        return new RedirectView(String.format("/book/%s", book.getId()), true);
+        return new RedirectView(String.format("/book/%s/view", book.getId()), true);
     }
 
     @GetMapping("book/create")
@@ -56,20 +56,12 @@ public class BookPagesController {
         return CREATE_PAGE;
     }
 
-    @PostMapping("book/create")
-    public RedirectView saveBook(BookDto book, Model model) {
-        Book saved = bookService.saveBook(BookDto.toDomain(book));
-        model.addAttribute("book", saved);
-        model.addAttribute("action", "Save");
-        return new RedirectView("/", true);
-    }
-
-    @GetMapping("/book")
+    @GetMapping("/book/list")
     public String listPageView() {
         return BOOK_LIST_PAGE;
     }
 
-    @GetMapping("/book/{id}")
+    @GetMapping("/book/{id}/view")
     public String bookPageView(Model model, @PathVariable("id") String id) {
         model.addAttribute("comment", new Comment());
         model.addAttribute("book-id", id);

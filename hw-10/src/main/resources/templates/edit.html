@@ -4,33 +4,44 @@
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Edit book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <h2 th:text="${action} == 'Save' ? 'Добавить новую книгу' : 'Редактировать книгу'">Редактор книги</h2>
-    <form id="save-form" th:action="${action} == 'Save' ? @{/book/create} : @{/book/{id}/update(id=*{book.id})}" th:method="post" action="#">
-        <div class="container">
-            <input id="id-input" type="hidden" th:field="${book.id}">
-        </div>
-        <div class="">
-            <label for="title-input">Название:</label>
-            <input id="title-input" type="text" th:field="${book.title}" required/>
-        </div>
-        <div class="">
-            <label for="author-input">Автор:</label>
-            <input id="author-input" type="text" th:field="${book.authors}"/>
-        </div>
+<h2 class="container">Редактор книги</h2>
+<form class="container" id="save-form" action="#">
+    <div class="">
+        <label for="title-input">Название:</label>
+        <input id="title-input" type="text" required/>
+    </div>
+    <div class="">
+        <label for="author-input">Автор:</label>
+        <input id="author-input" type="text" required/>
+    </div>
 
-        <div class="">
-            <label for="genre-input">Жанр:</label>
-            <input id="genre-input" type="text" th:field="${book.genres}"/>
-        </div>
-        <div class="">
-            <input id="comment-input" type="hidden" th:field="${book.comments}">
-        </div>
-        <div class="">
-            <button type="submit">Сохранить</button>
-        </div>
-    </form>
+    <div class="">
+        <label for="genre-input">Жанр:</label>
+        <input id="genre-input" type="text"/>
+    </div>
+    <div class="">
+        <label for="comment-input">Комментарий:</label>
+        <input id="comment-input" type="text">
+    </div>
+    <div class="fafa-check">
+        <p id="success"></p>
+    </div>
+    <div class="">
+        <button id="save-book" type="submit">Сохранить</button>
+    </div>
+</form>
+<div class="text container">
+    <a th:href="@{/}" href="index.html">На главную</a>
+</div>
+
+<div class="text container">
+    <a th:href="@{/book/list}" href="list.html">К списку книг</a>
+</div>
+
+<script src="/static/js/scripts.js"></script>
 </body>
 </html>

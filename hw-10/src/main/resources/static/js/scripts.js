@@ -2,7 +2,7 @@ function getBookById() {
     const id = getIdFromUrl();
 
     if (id) {
-        fetch('/api/book/' + id)
+        fetch('/api/book/' + id + '/view')
             .then(response => response.json())
             .then(book => {
                 console.log(book)
@@ -43,32 +43,62 @@ getComments = val => {
     return fragment;
 }
 
-$(document).ready(function ($) {
-    $('#addComment').click(function () {
-        const bookId = getIdFromUrl();
-        let comment = {text: $('#comment-text').val()};
-        $.ajax({
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            type: 'POST',
-            contentType: 'application/JSON',
-            url: '/api/book/' + bookId + '/comment',
-            data: JSON.stringify(comment),
-            data_type: 'json',
-            timeout: 600000,
-        }).done(fetch('/api/book/' + bookId)
-            .then(response => response.json())
-            .then(() => document.getElementById('book-comments')
-                .append(framingComment(comment))
-            )
-        )
-    });
-});
-
 function framingComment(comment) {
     let li = document.createElement('li');
     li.append(comment.text);
     return li;
 }
+
+$('#addComment').click(function () {
+    const bookId = getIdFromUrl();
+    let comment = {text: $('#comment-text').val()};
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        type: 'POST',
+        contentType: 'application/JSON',
+        url: '/api/book/' + bookId + '/comment',
+        data: JSON.stringify(comment),
+        data_type: 'json',
+        timeout: 600000,
+    }).done(fetch('/api/book/' + bookId + '/view')
+        .then(response => response.json())
+        .then(() => document.getElementById('book-comments')
+            .append(framingComment(comment))
+        )
+    )
+});
+
+$('#save-book').click(function (){
+    let title = $('#title-input').val();
+    let author = $('#author-input').val();
+    let genre = $('#genre-input').val();
+    let comment = $('#comment-input').val();
+
+    if (title === "" || author === "") {
+        document.getElementById('title-input').innerHTML='Это поле должно быть заполнено';
+        document.getElementById('author-input').innerHTML='Это поле должно быть заполнено';
+    } else {
+    let book = {
+        title: title,
+        authors: [author],
+        genres: [genre],
+        comments: [comment]
+    }
+    $.ajax({
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        type: 'POST',
+        contentType: 'application/JSON',
+        url: '/api/book/create',
+        data: JSON.stringify(book),
+        data_type: 'json',
+        timeout: 600000,
+    }).done(fetch('/api/book/create')
+        .then(() => document.getElementById('success').append('Книга успешно сохранена'))
+    )
+}})

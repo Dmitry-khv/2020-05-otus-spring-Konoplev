@@ -1,4 +1,4 @@
-$.getJSON('/api/books').done(books => {
+$.getJSON('/api/book/list').done(books => {
     $.each(books, (idx, val) => {
         let bookId = val.id;
         let bookTitle = val.title;
