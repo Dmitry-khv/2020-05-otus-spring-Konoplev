@@ -1,44 +1,50 @@
 package ru.otus.library.rest;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
-import ru.otus.library.service.impl.DBBookServiceImpl;
+import ru.otus.library.repository.BookRepository;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
 
 @AllArgsConstructor
 @RestController
 public class BookController {
-
-    private final DBBookServiceImpl bookService;
+    private static final Logger LOGGER = LoggerFactory.getLogger(BookController.class);
+    private final BookRepository bookRepository;
 
     @GetMapping("/api/book/list")
-    public String getAllBooks() throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        List<Book> books = bookService.getBooks();
-        return mapper.writeValueAsString(books);
+    public Flux<Book> getAllBooks() {
+        LOGGER.info("get all books");
+        return bookRepository.findAll();
     }
 
     @GetMapping("/api/book/{id}/view")
-    public String bookPageView(@PathVariable("id") String id) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.writeValueAsString(bookService.getBookById(id));
+    public Mono<Book> bookPageView(@PathVariable("id") String id) {
+        return bookRepository.findById(id);
     }
 
     @PostMapping(value = "/api/book/{id}/comment")
-    public void addComment(@PathVariable("id") String id, @RequestBody Comment comment) {
-        bookService.addNewCommentToBook(id, comment);
+    public Mono<Void> addComment(@PathVariable("id") String id, @RequestBody Comment comment) {
+        return bookRepository
+                .findById(id)
+                .doOnNext(book -> book.addComment(comment))
+                .flatMap(bookRepository::save)
+                .onErrorResume(e -> Mono.empty())
+                .then();
     }
 
     @PostMapping("/api/book/create")
-    public void createBook(@RequestBody Book book, HttpServletResponse response) throws IOException {
-        bookService.saveBook(book);
-        response.sendRedirect("/api/book/list");
+    public Mono<Book> createBook(@RequestBody Book book) {
+        return bookRepository.save(book);
+    }
+
+    @DeleteMapping("book/{id}/delete")
+    public Mono<Void> deleteBook(@PathVariable("id") String id) {
+        return bookRepository.deleteById(id);
     }
 }

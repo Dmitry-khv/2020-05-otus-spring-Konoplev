@@ -1,12 +1,9 @@
 package ru.otus.library.repository;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import ru.otus.library.domain.Author;
 
-import java.util.Optional;
 
 
-public interface AuthorRepository extends MongoRepository<Author, String> {
-
-    Optional<Author> findByName(String name);
+public interface AuthorRepository extends ReactiveMongoRepository<Author, String> {
 }

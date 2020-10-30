@@ -1,6 +1,5 @@
 package ru.otus.library.rest;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import ru.otus.library.domain.Book;
 import ru.otus.library.repository.BookRepository;
 
 
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,7 +36,7 @@ class BookControllerTest {
         assertThat(responseEntity.getStatusCodeValue()).isBetween(200, 400);
         Object obj = responseEntity.getBody();
         Book bookFromWeb = new ObjectMapper().convertValue(obj, Book.class);
-        Book bookFromDb = bookRepository.findById(BOOK_ID).get();
+        Book bookFromDb = bookRepository.findById(BOOK_ID).block();
         assertThat(bookFromWeb).isEqualTo(bookFromDb);
     }
 }

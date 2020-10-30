@@ -22,10 +22,10 @@ public class MongoBookCascadeSaveEventsListener extends AbstractMongoEventListen
         super.onBeforeConvert(event);
         Book book = event.getSource();
         if(!book.getAuthors().isEmpty()) {
-            book.getAuthors().stream().filter(a -> Objects.isNull(a.getId())).forEach(authorRepository::save);
+            book.getAuthors().stream().filter(a -> Objects.isNull(a.getId())).forEach(author -> authorRepository.save(author).block());
         }
         if(!book.getGenres().isEmpty()) {
-            book.getGenres().stream().filter(g -> Objects.isNull(g.getId())).forEach(genreRepository::save);
+            book.getGenres().stream().filter(g -> Objects.isNull(g.getId())).forEach(genre -> genreRepository.save(genre).block());
         }
     }
 }

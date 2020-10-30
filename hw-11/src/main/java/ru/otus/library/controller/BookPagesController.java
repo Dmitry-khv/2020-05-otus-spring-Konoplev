@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
+import reactor.core.publisher.Mono;
+import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
-import ru.otus.library.rest.dto.AuthorDto;
-import ru.otus.library.rest.dto.BookDto;
-import ru.otus.library.service.impl.DBAuthorServiceImpl;
-import ru.otus.library.service.impl.DBBookServiceImpl;
+import ru.otus.library.repository.AuthorRepository;
 
 import java.util.List;
 import java.util.Map;
@@ -22,8 +21,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BookPagesController {
 
-    private final DBBookServiceImpl bookService;
-    private final DBAuthorServiceImpl authorService;
+    private final AuthorRepository authorRepository;
 
     private static final String START_PAGE = "index";
     private static final String CREATE_PAGE = "edit";
@@ -31,9 +29,11 @@ public class BookPagesController {
     private static final String BOOK_LIST_PAGE = "list";
 
     @GetMapping("/")
-    public String startPageView(Model model) {
-        model.addAttribute("book", new Book());
-        return START_PAGE;
+    public Mono <String> startPageView(Model model) {
+        return Mono.fromCallable(() -> {
+            model.addAttribute("book", new Book());
+            return START_PAGE;
+        });
     }
 
     @PostMapping("/")
@@ -42,18 +42,19 @@ public class BookPagesController {
     }
 
     @GetMapping("book/create")
-    public String addBookView(Model model) {
-        BookDto book = new BookDto();
-        List<AuthorDto> authors = authorService.getAll().stream()
-                .map(AuthorDto::toDto)
-                .collect(Collectors.toList());
+    public Mono<String> addBookView(Model model) {
+        return Mono.fromCallable(() -> {
+            Mono<List<Author>> authors = authorRepository.findAll()
+//                    .map(Author::toDto)
+                    .collect(Collectors.toList());
 
-        model.addAllAttributes(Map.of(
-                "action", "Save",
-                "book", book,
-                "authors", authors,
-                "authorDto", new AuthorDto()));
-        return CREATE_PAGE;
+            model.addAllAttributes(Map.of(
+                    "action", "Save",
+                    "book", new Book(),
+                    "authors", authors,
+                    "authorDto", new Author()));
+            return CREATE_PAGE;
+        });
     }
 
     @GetMapping("/book/list")
@@ -62,15 +63,16 @@ public class BookPagesController {
     }
 
     @GetMapping("/book/{id}/view")
-    public String bookPageView(Model model, @PathVariable("id") String id) {
-        model.addAttribute("comment", new Comment());
-        model.addAttribute("book-id", id);
-        return BOOK_VIEW_PAGE;
+    public Mono<String> bookPageView(Model model, @PathVariable("id") String id) {
+        return Mono.fromCallable(() -> {
+            model.addAttribute("comment", new Comment());
+            model.addAttribute("book-id", id);
+            return BOOK_VIEW_PAGE;
+        });
     }
 
     @GetMapping("book/{id}/delete")
     public RedirectView deleteBook(@PathVariable String id) {
-        bookService.deleteBookById(id);
         return new RedirectView("/book/list", true);
     }
 }
