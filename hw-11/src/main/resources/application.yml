@@ -1,0 +1,18 @@
+spring:
+  data:
+    mongodb:
+      port: 8080
+      database: library
+  mvc:
+    static-path-pattern: static/**
+  main:
+    allow-bean-definition-overriding: true
+
+  mongock:
+    runner-type: initializingbean
+    change-logs-scan-package:
+      - ru.otus.library.changelogs
+
+logging:
+  level:
+    root: info

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>List of all books</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="title">
+    <h3>Список книг:</h3>
+</div>
+<div class="col-md">
+    <table id="listBook" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Название</th>
+            <th scope="col">Автор</th>
+            <th scope="col">Жанр</th>
+        </tr>
+        </thead>
+        <tbody id="books">
+        </tbody>
+    </table>
+</div>
+<div class="text-center">
+    <a th:href="@{/}" href="index.html">На главную</a>
+</div>
+
+<script src="/static/js/scripts.js"></script>
+<script src="/static/js/list.js"></script>
+</body>
+</html>
