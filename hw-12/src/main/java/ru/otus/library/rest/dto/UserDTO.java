@@ -15,19 +15,19 @@ public class UserDTO {
     private String id;
     private String login;
     private String password;
-    private int accessLevel;
+    private String role;
 
-    public UserDTO(String login, String password, int accessLevel) {
+    public UserDTO(String login, String password, String role) {
         this.login = login;
         this.password = password;
-        this.accessLevel = accessLevel;
+        this.role = role;
     }
 
-    public User toDomain(UserDTO dto) {
-        return new User(dto.getLogin(), dto.getPassword(), dto.getAccessLevel());
+    public static User toDomain(UserDTO dto) {
+        return new User(dto.getLogin(), dto.getPassword(), dto.getRole());
     }
 
-    public UserDTO toDto(User user) {
-        return new UserDTO(user.getLogin(), user.getPassword(), user.getAccessLevel());
+    public static UserDTO toDto(User user) {
+        return new UserDTO(user.getLogin(), user.getPassword(), user.getRole());
     }
 }

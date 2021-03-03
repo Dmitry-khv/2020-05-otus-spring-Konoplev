@@ -21,10 +21,10 @@ public class MongoBookCascadeSaveEventsListener extends AbstractMongoEventListen
     public void onBeforeConvert(BeforeConvertEvent<Book> event) {
         super.onBeforeConvert(event);
         Book book = event.getSource();
-        if(!book.getAuthors().isEmpty()) {
+        if (!book.getAuthors().isEmpty()) {
             book.getAuthors().stream().filter(a -> Objects.isNull(a.getId())).forEach(authorRepository::save);
         }
-        if(!book.getGenres().isEmpty()) {
+        if (!book.getGenres().isEmpty()) {
             book.getGenres().stream().filter(g -> Objects.isNull(g.getId())).forEach(genreRepository::save);
         }
     }

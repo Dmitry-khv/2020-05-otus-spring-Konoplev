@@ -11,7 +11,6 @@ import ru.otus.library.domain.Book;
 import java.util.List;
 
 
-
 @RequiredArgsConstructor
 public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 

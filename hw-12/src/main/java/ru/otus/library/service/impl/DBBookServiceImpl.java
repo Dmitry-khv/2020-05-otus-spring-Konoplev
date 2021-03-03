@@ -1,12 +1,12 @@
 package ru.otus.library.service.impl;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
 import ru.otus.library.repository.BookRepository;
 import ru.otus.library.service.DBBookService;
 import ru.otus.library.service.NotFoundException;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

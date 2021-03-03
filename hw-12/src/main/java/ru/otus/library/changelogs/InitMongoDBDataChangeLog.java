@@ -73,13 +73,11 @@ public class InitMongoDBDataChangeLog {
 
     @ChangeSet(order = "004", id = "initUsers", author = "konoplev", runAlways = true)
     public void initUsers(UserRepository repository) {
-        user = new UserDTO("1", "admin", "password", 3);
+        user = new UserDTO("1", "admin", "password", "ADMIN");
         repository.save(user);
-        user = new UserDTO("2", "user", "password", 2);
+        user = new UserDTO("2", "user", "password", "USER");
         repository.save(user);
-        user = new UserDTO("3", "guest", "password", 1);
-        repository.save(user);
-        user = new UserDTO("4", "blocked", "password", 0);
+        user = new UserDTO("3", "predator", "predator", "ADMIN");
         repository.save(user);
     }
 }

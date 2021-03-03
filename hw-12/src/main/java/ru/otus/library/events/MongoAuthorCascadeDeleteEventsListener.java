@@ -9,7 +9,6 @@ import ru.otus.library.domain.Author;
 import ru.otus.library.repository.BookRepository;
 
 
-
 @Component
 @RequiredArgsConstructor
 public class MongoAuthorCascadeDeleteEventsListener extends AbstractMongoEventListener<Author> {

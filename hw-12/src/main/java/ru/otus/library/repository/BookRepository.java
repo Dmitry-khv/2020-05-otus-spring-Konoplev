@@ -1,8 +1,8 @@
 package ru.otus.library.repository;
 
 
-import ru.otus.library.domain.Book;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import ru.otus.library.domain.Book;
 
 import java.util.List;
 

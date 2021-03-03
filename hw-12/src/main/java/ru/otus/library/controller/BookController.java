@@ -66,7 +66,7 @@ public class BookController {
 
     @GetMapping("book/list")
     public String listPageView(Model model) {
-        List<BookDto> books =  bookService.getBooks().stream()
+        List<BookDto> books = bookService.getBooks().stream()
                 .map(BookDto::toDto)
                 .collect(Collectors.toList());
         model.addAttribute("books", books);

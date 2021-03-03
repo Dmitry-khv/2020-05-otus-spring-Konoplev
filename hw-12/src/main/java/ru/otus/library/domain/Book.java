@@ -9,9 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Document("books")
 @Data
@@ -31,11 +29,11 @@ public class Book {
     @Field("comments")
     private List<Comment> comments = new ArrayList<>();
 
-    public void addAuthor(Author...author) {
+    public void addAuthor(Author... author) {
         authors.addAll(List.of(author));
     }
 
-    public void addGenre(Genre...genre) {
+    public void addGenre(Genre... genre) {
         genres.addAll(List.of(genre));
     }
 
