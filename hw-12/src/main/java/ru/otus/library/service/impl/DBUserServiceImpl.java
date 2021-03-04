@@ -10,8 +10,9 @@ import ru.otus.library.service.DBUserService;
 
 import java.util.Collections;
 
-@Service
+@Service("userDetailsService")
 public class DBUserServiceImpl implements DBUserService {
+
     private final UserRepository userRepository;
 
     @Autowired
@@ -24,6 +25,6 @@ public class DBUserServiceImpl implements DBUserService {
         return userRepository.findByLogin(username)
                 .map(UserDTO::toDomain)
                 .map(user -> new User(user.getLogin(), user.getPassword(), Collections.emptyList()))
-                .orElseThrow();
+                .orElseThrow(() -> new UsernameNotFoundException(String.format("user with name:%s not found", username)));
     }
 }

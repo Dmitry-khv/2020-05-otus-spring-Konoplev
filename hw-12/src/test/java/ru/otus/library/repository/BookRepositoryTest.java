@@ -12,7 +12,6 @@ import ru.otus.library.domain.Comment;
 import ru.otus.library.domain.Genre;
 
 import java.util.List;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -117,8 +116,8 @@ class BookRepositoryTest {
         book.addGenre(new Genre(ACTUAL_BOOK_GENRE));
         book.getComments().addAll(List.of(new Comment(ACTUAL_COMMENT_1), new Comment(ACTUAL_COMMENT_2)));
         Book savedBook = bookRepository.save(book);
-        savedBook.getAuthors().forEach(a-> assertThat(a.getId() != null));
-        savedBook.getGenres().forEach(g-> assertThat(g.getId() != null));
+        savedBook.getAuthors().forEach(a -> assertThat(a.getId() != null));
+        savedBook.getGenres().forEach(g -> assertThat(g.getId() != null));
         bookRepository.delete(savedBook);
     }
 

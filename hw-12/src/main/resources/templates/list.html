@@ -2,7 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>List of all books</title>
 
 </head>
@@ -13,35 +14,35 @@
 <div class="col-md">
     <table class="table table-bordered table-striped">
         <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Название</th>
-                <th scope="col">Жанр</th>
-                <th scope="col">Автор</th>
-                <th scope="col">Изменить</th>
-            </tr>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Название</th>
+            <th scope="col">Жанр</th>
+            <th scope="col">Автор</th>
+            <th scope="col">Изменить</th>
+        </tr>
         </thead>
         <tbody>
-            <tr th:each="book : ${books}">
-                <th scope="row" th:text="${book.id}"></th>
-                <td th:text="${book.title}"></td>
-                <td>
-                    <ul class="list-group" th:each="genre : ${book.genres}">
-                        <li class="list-group" th:text="${genre.name}"></li>
-                    </ul>
-                </td>
-                <td>
-                    <ul class="list-group" th:each="author : ${book.authors}">
-                        <li class="list-group" th:text="${author.name}"></li>
-                    </ul>
-                </td>
-                <td>
-                    <ul class="list-group">
-                        <a th:href="@{/book/{id}(id = ${book.id})}" href="bookView.html">Посмотреть</a>
-                        <a th:href="@{/book/{id}/delete(id = ${book.id})}" href="list.html">Удалить</a>
-                    </ul>
-                </td>
-            </tr>
+        <tr th:each="book : ${books}">
+            <th scope="row" th:text="${book.id}"></th>
+            <td th:text="${book.title}"></td>
+            <td>
+                <ul class="list-group" th:each="genre : ${book.genres}">
+                    <li class="list-group" th:text="${genre.name}"></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="list-group" th:each="author : ${book.authors}">
+                    <li class="list-group" th:text="${author.name}"></li>
+                </ul>
+            </td>
+            <td>
+                <ul class="list-group">
+                    <a th:href="@{/book/{id}(id = ${book.id})}" href="bookView.html">Посмотреть</a>
+                    <a th:href="@{/book/{id}/delete(id = ${book.id})}" href="list.html">Удалить</a>
+                </ul>
+            </td>
+        </tr>
         </tbody>
     </table>
 </div>
