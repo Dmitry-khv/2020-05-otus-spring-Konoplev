@@ -9,8 +9,9 @@
 
 <body>
 <h2 th:text="${action} == 'Save' ? 'Добавить новую книгу' : 'Редактировать книгу'">Редактор книги</h2>
+<!--/*@thymesVar id="book" type="ru.otus.library.rest.dto.BookDto"*/-->
 <form id="save-form" th:action="${action} == 'Save' ? @{/book/create} : @{/book/{id}/update(id=*{book.id})}"
-      th:method="post" action="#">
+      th:method="post" action="#" th:object="${book}">
     <div class="container">
         <input id="id-input" type="hidden" th:field="${book.id}">
     </div>
@@ -20,15 +21,12 @@
     </div>
     <div class="">
         <label for="author-input">Автор:</label>
-        <input id="author-input" type="text" th:field="${book.authors}"/>
+        <input id="author-input" type="text" th:field="${book.authors[0].name}"/>
     </div>
 
     <div class="">
         <label for="genre-input">Жанр:</label>
-        <input id="genre-input" type="text" th:field="${book.genres}"/>
-    </div>
-    <div class="">
-        <input id="comment-input" type="hidden" th:field="${book.comments}">
+        <input id="genre-input" type="text" th:field="${book.genres[0].name}"/>
     </div>
     <div class="">
         <button type="submit">Сохранить</button>

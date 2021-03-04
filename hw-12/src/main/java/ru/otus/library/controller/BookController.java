@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
+import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
+import ru.otus.library.domain.Genre;
 import ru.otus.library.rest.dto.AuthorDto;
 import ru.otus.library.rest.dto.BookDto;
 import ru.otus.library.service.impl.DBAuthorServiceImpl;
@@ -44,15 +46,12 @@ public class BookController {
     @GetMapping("book/create")
     public String addBookView(Model model) {
         BookDto book = new BookDto();
-        List<AuthorDto> authors = authorService.getAll().stream()
-                .map(AuthorDto::toDto)
-                .collect(Collectors.toList());
-
+        book.getAuthors().add(new Author());
+        book.getGenres().add(new Genre());
         model.addAllAttributes(Map.of(
                 "action", "Save",
-                "book", book,
-                "authors", authors,
-                "authorDto", new AuthorDto()));
+                "book", book
+        ));
         return CREATE_PAGE;
     }
 
