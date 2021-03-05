@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+    <title>Edit book</title>
+    <style type="text/css">
+        body {
+            padding: 50px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        input:read-only {
+            background: lightgray;
+        }
+
+        .row {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <h3>Главная страница</h3>
+</div>
+
+<form action="#" id="search-book" th:action="@{/}" th:method="post">
+    <div class="row">
+        <label for="id-input">Найти книгу по Id</label>
+    </div>
+    <div class="row">
+        <input id="id-input" th:field="${book.id}" type="text">
+        <button class="btn btn-primary" type="submit">Найти</button>
+    </div>
+</form>
+
+<div class="row">
+    <a href="list.html" th:href="@{/book/list}">Список книг</a>
+</div>
+
+<div class="row">
+    <a href="edit.html" th:href="@{/book/create}">Добавить новую книгу</a>
+</div>
+
+<!--    <form class="row" th:action="@{/book/{id}(id = ${book.id})" th:method="post">-->
+<!--        <label for="seach-book">Найти книгу по Id</label>-->
+<!--        <input id="seach-book" type="text" th:value="">-->
+<!--        <a th:href="@{list.html}" href="bookView.html">Найти книгу по Id</a>-->
+<!--    </form>-->
+
+</body>
+</html>
