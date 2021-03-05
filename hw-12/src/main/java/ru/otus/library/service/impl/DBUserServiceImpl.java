@@ -2,16 +2,16 @@ package ru.otus.library.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import ru.otus.library.repository.UserRepository;
 import ru.otus.library.rest.dto.UserDTO;
-import ru.otus.library.service.DBUserService;
 
 import java.util.Collections;
 
 @Service("userDetailsService")
-public class DBUserServiceImpl implements DBUserService {
+public class DBUserServiceImpl implements UserDetailsService {
 
     private final UserRepository userRepository;
 

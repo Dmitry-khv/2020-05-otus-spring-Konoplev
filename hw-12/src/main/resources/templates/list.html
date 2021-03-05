@@ -2,8 +2,8 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
     <title>List of all books</title>
 
 </head>
@@ -38,8 +38,8 @@
             </td>
             <td>
                 <ul class="list-group">
-                    <a th:href="@{/book/{id}(id = ${book.id})}" href="bookView.html">Посмотреть</a>
-                    <a th:href="@{/book/{id}/delete(id = ${book.id})}" href="list.html">Удалить</a>
+                    <a href="bookView.html" th:href="@{/book/{id}(id = ${book.id})}">Посмотреть</a>
+                    <a href="list.html" th:href="@{/book/{id}/delete(id = ${book.id})}">Удалить</a>
                 </ul>
             </td>
         </tr>
@@ -47,7 +47,7 @@
     </table>
 </div>
 <div class="text-center">
-    <a th:href="@{/}" href="index.html">На главную</a>
+    <a href="index.html" th:href="@{/}">На главную</a>
 </div>
 
 </body>

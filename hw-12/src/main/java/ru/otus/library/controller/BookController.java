@@ -11,7 +11,6 @@ import ru.otus.library.domain.Author;
 import ru.otus.library.domain.Book;
 import ru.otus.library.domain.Comment;
 import ru.otus.library.domain.Genre;
-import ru.otus.library.rest.dto.AuthorDto;
 import ru.otus.library.rest.dto.BookDto;
 import ru.otus.library.service.impl.DBAuthorServiceImpl;
 import ru.otus.library.service.impl.DBBookServiceImpl;
@@ -24,13 +23,12 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BookController {
 
-    private final DBBookServiceImpl bookService;
-    private final DBAuthorServiceImpl authorService;
-
     private static final String START_PAGE = "index";
     private static final String CREATE_PAGE = "edit";
     private static final String BOOK_VIEW_PAGE = "bookView";
     private static final String BOOK_LIST_PAGE = "list";
+    private final DBBookServiceImpl bookService;
+    private final DBAuthorServiceImpl authorService;
 
     @GetMapping("/")
     public String startPageView(Model model) {
