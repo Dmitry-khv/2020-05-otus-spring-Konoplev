@@ -16,7 +16,7 @@
         <mongock-spring.version>4.1.2.BETA</mongock-spring.version>
     </properties>
 
-    <artifactId>hw-12</artifactId>
+    <artifactId>hw-13</artifactId>
 
     <dependencies>
         <dependency>
