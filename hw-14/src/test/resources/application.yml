@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      database: products
+      port: 0
+
+  shell:
+    interactive:
+      enabled: false
+
+mongock:
+  runner-type: InitializingBean
+  change-logs-scan-package:
+    - otus.amogilevskiy.spring.db

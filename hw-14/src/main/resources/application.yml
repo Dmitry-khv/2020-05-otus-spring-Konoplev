@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    initialization-mode: always
+    schema: schema.sql
+
+  h2:
+    console:
+      path: /h2-console
+      settings:
+        web-allow-others: true
+      enabled: true
+
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    mongodb:
+      database: products
+      port: 0
+  batch:
+    initialize-schema: always
+    job:
+      enabled: false
+
+mongock:
+  runner-type: InitializingBean
+  change-logs-scan-package:
+    - otus.amogilevskiy.spring.db
